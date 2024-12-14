@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bemklsu71xhkj"]
+
+[ext_resource type="Texture2D" uid="uid://bsousmg65dy4c" path="res://Logo Intro/ITS PEAK (2).png" id="1_7frw0"]
+[ext_resource type="Texture2D" uid="uid://blhuahm0dpivs" path="res://Logo Intro/new_gradient_texture_1d.tres" id="2_idc00"]
+[ext_resource type="Script" path="res://Logo Intro/intro.gd" id="3_jb11k"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ItsPeak(2)" type="Sprite2D" parent="Camera2D"]
+position = Vector2(4, 39)
+scale = Vector2(0.603704, 0.603704)
+texture = ExtResource("1_7frw0")
+
+[node name="Black Padding" type="Sprite2D" parent="Camera2D/ItsPeak(2)"]
+position = Vector2(196.288, -544.969)
+scale = Vector2(9.09101, 171.856)
+texture = ExtResource("2_idc00")
+
+[node name="blinker" type="Sprite2D" parent="."]
+position = Vector2(-3.99999, 46.25)
+scale = Vector2(6.32813, 763.5)
+texture = ExtResource("2_idc00")
+script = ExtResource("3_jb11k")
+
+[node name="blinking_timer" type="Timer" parent="blinker"]
+wait_time = 2.0
+one_shot = true
+
+[node name="fade_timer" type="Timer" parent="blinker"]
+one_shot = true
