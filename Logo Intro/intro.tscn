@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://c104k6n7d56k0"]
+
+[ext_resource type="VideoStream" path="res://Logo Intro/ITS-PEAK (1).ogv" id="1_iooup"]
+[ext_resource type="Texture2D" uid="uid://blhuahm0dpivs" path="res://Logo Intro/new_gradient_texture_1d.tres" id="2_idc00"]
+[ext_resource type="AudioStream" uid="uid://dh06imqefay5r" path="res://Logo Intro/ITS PEAK_1.wav" id="3_8jot3"]
+[ext_resource type="Script" path="res://Logo Intro/intro.gd" id="3_jb11k"]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.495, 0.495)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Camera2D"]
+offset_left = -1162.0
+offset_top = -661.0
+offset_right = 1162.0
+offset_bottom = 654.0
+stream = ExtResource("1_iooup")
+volume_db = -80.0
+expand = true
+script = ExtResource("3_jb11k")
+
+[node name="audio" type="AudioStreamPlayer" parent="Camera2D"]
+stream = ExtResource("3_8jot3")
+volume_db = -2.811
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(-16.4999, 37.625)
+scale = Vector2(10.793, 1722.75)
+texture = ExtResource("2_idc00")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+autostart = true
+
+[connection signal="finished" from="Camera2D/VideoStreamPlayer" to="Camera2D/VideoStreamPlayer" method="_on_finished"]
+[connection signal="timeout" from="Timer" to="Camera2D/VideoStreamPlayer" method="_on_timer_timeout"]
