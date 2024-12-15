@@ -13,6 +13,7 @@ func _process(delta):
 
 
 func _on_timer_timeout():
+	'''Plays the video and audio track after a 0.2 second delay'''
 	play()
 	audio.play()
 
@@ -20,4 +21,6 @@ func _on_timer_timeout():
 
 
 func _on_finished():
+	'''Transition to title/game when video is finished'''
+	
 	get_tree().change_scene_to_file("res://game.tscn")
