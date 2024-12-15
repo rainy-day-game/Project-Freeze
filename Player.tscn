@@ -1,19 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://b3rcve8ampq0s"]
+[gd_scene load_steps=18 format=3 uid="uid://b3rcve8ampq0s"]
 
-[ext_resource type="Texture2D" uid="uid://dhrmy1dydb2fh" path="res://image exports maincharacter/idle/idle left_0000.png" id="1_ipw7c"]
-[ext_resource type="Texture2D" uid="uid://ji8mkndnp7m4" path="res://image exports maincharacter/idle/idle left_0002.png" id="2_ij077"]
-[ext_resource type="Texture2D" uid="uid://t1i27ntvpbo5" path="res://image exports maincharacter/idle/idle left_0004.png" id="3_q1ihf"]
-[ext_resource type="Texture2D" uid="uid://coqx3us3pbg4v" path="res://image exports maincharacter/idle/main idle_0000.png" id="4_ewx5x"]
-[ext_resource type="Texture2D" uid="uid://bt3ktunecagof" path="res://image exports maincharacter/idle/main idle_0002.png" id="5_1jxjt"]
-[ext_resource type="Texture2D" uid="uid://c180ti2fgqcit" path="res://image exports maincharacter/idle/main idle_0004.png" id="6_3f54v"]
-[ext_resource type="Texture2D" uid="uid://eenp46tbv0gs" path="res://image exports maincharacter/left/walk left_0000.png" id="7_xec76"]
-[ext_resource type="Texture2D" uid="uid://44yk4bs7xskk" path="res://image exports maincharacter/left/walk left_0001.png" id="8_nc4fw"]
-[ext_resource type="Texture2D" uid="uid://dyb3bhvrt0i28" path="res://image exports maincharacter/left/walk left_0003.png" id="9_dji45"]
-[ext_resource type="Texture2D" uid="uid://dvjyy23w55bkc" path="res://image exports maincharacter/left/walk left_0005.png" id="10_pxqat"]
-[ext_resource type="Texture2D" uid="uid://dicohasqgvgi1" path="res://image exports maincharacter/right/walk right_0000.png" id="11_q5eau"]
-[ext_resource type="Texture2D" uid="uid://bw0n1b1karyaw" path="res://image exports maincharacter/right/walk right_0001.png" id="12_6hs6p"]
-[ext_resource type="Texture2D" uid="uid://dvcfkaddhkwup" path="res://image exports maincharacter/right/walk right_0003.png" id="13_a4lbu"]
-[ext_resource type="Texture2D" uid="uid://ubocc13a15jv" path="res://image exports maincharacter/right/walk right_0005.png" id="14_6xpte"]
+[ext_resource type="Script" path="res://Player.gd" id="1_bfcxh"]
+[ext_resource type="Texture2D" uid="uid://dhrmy1dydb2fh" path="res://art assets/Player/image exports maincharacter/idle/idle left_0000.png" id="1_ipw7c"]
+[ext_resource type="Texture2D" uid="uid://ji8mkndnp7m4" path="res://art assets/Player/image exports maincharacter/idle/idle left_0002.png" id="2_ij077"]
+[ext_resource type="Texture2D" uid="uid://t1i27ntvpbo5" path="res://art assets/Player/image exports maincharacter/idle/idle left_0004.png" id="3_q1ihf"]
+[ext_resource type="Texture2D" uid="uid://coqx3us3pbg4v" path="res://art assets/Player/image exports maincharacter/idle/main idle_0000.png" id="4_ewx5x"]
+[ext_resource type="Texture2D" uid="uid://bt3ktunecagof" path="res://art assets/Player/image exports maincharacter/idle/main idle_0002.png" id="5_1jxjt"]
+[ext_resource type="Texture2D" uid="uid://c180ti2fgqcit" path="res://art assets/Player/image exports maincharacter/idle/main idle_0004.png" id="6_3f54v"]
+[ext_resource type="Texture2D" uid="uid://eenp46tbv0gs" path="res://art assets/Player/image exports maincharacter/left/walk left_0000.png" id="7_xec76"]
+[ext_resource type="Texture2D" uid="uid://44yk4bs7xskk" path="res://art assets/Player/image exports maincharacter/left/walk left_0001.png" id="8_nc4fw"]
+[ext_resource type="Texture2D" uid="uid://dyb3bhvrt0i28" path="res://art assets/Player/image exports maincharacter/left/walk left_0003.png" id="9_dji45"]
+[ext_resource type="Texture2D" uid="uid://dvjyy23w55bkc" path="res://art assets/Player/image exports maincharacter/left/walk left_0005.png" id="10_pxqat"]
+[ext_resource type="Texture2D" uid="uid://dicohasqgvgi1" path="res://art assets/Player/image exports maincharacter/right/walk right_0000.png" id="11_q5eau"]
+[ext_resource type="Texture2D" uid="uid://bw0n1b1karyaw" path="res://art assets/Player/image exports maincharacter/right/walk right_0001.png" id="12_6hs6p"]
+[ext_resource type="Texture2D" uid="uid://dvcfkaddhkwup" path="res://art assets/Player/image exports maincharacter/right/walk right_0003.png" id="13_a4lbu"]
+[ext_resource type="Texture2D" uid="uid://ubocc13a15jv" path="res://art assets/Player/image exports maincharacter/right/walk right_0005.png" id="14_6xpte"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yqn7q"]
 animations = [{
@@ -91,10 +92,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4bdy"]
+radius = 30.0
+height = 150.0
 
-[node name="player" type="Node2D" parent="."]
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_bfcxh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(43, -43)
+scale = Vector2(1.67188, 1.67188)
 sprite_frames = SubResource("SpriteFrames_yqn7q")
-animation = &"jump"
+animation = &"idle right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(44, -52)
+shape = SubResource("CapsuleShape2D_y4bdy")
