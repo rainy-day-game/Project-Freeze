@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://game.gd" id="1_ilyca"]
 [ext_resource type="Texture2D" uid="uid://83rlb0gmq5dv" path="res://icon.svg" id="1_pl3f2"]
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Transition/transition_screen.tscn" id="2_tfmlv"]
-[ext_resource type="Script" path="res://Player/Player.gd" id="4_mdys4"]
-[ext_resource type="Texture2D" uid="uid://coqx3us3pbg4v" path="res://Player/image exports maincharacter/idle/main idle_0000.png" id="4_ypjeh"]
+[ext_resource type="Script" path="res://Player.gd" id="4_mdys4"]
+[ext_resource type="Texture2D" uid="uid://coqx3us3pbg4v" path="res://art assets/Player/image exports maincharacter/idle/main idle_0000.png" id="4_ypjeh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xwrb"]
 radius = 37.0

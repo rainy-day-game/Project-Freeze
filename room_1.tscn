@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbcw70rdlsifn"]
+
+[ext_resource type="Texture2D" uid="uid://yrpmbwkvax6q" path="res://art assets/test area/Back Ground_0000.png" id="1_h8efg"]
+[ext_resource type="Texture2D" uid="uid://dnux871ybw5qv" path="res://art assets/test area/foreground_0000.png" id="2_w2yuy"]
+
+[node name="Room1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577.167, 322.5)
+scale = Vector2(0.902865, 0.898611)
+texture = ExtResource("1_h8efg")
+
+[node name="Foreground0000" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(725, 283)
+scale = Vector2(1.05556, 1.05556)
+texture = ExtResource("2_w2yuy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 325)
