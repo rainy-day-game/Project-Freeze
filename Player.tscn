@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b3rcve8ampq0s"]
+[gd_scene load_steps=28 format=3 uid="uid://b3rcve8ampq0s"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_bfcxh"]
 [ext_resource type="Texture2D" uid="uid://dhrmy1dydb2fh" path="res://art assets/Player/image exports maincharacter/idle/idle left_0000.png" id="1_ipw7c"]
@@ -23,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://ubocc13a15jv" path="res://art assets/Player/image exports maincharacter/right/walk right_0005.png" id="14_6xpte"]
 [ext_resource type="Texture2D" uid="uid://btyyedpmgncvb" path="res://art assets/Player/image exports maincharacter/Jump right/Timeline 1_0000.png" id="14_x2h18"]
 [ext_resource type="Texture2D" uid="uid://cn43m48ao85fi" path="res://art assets/Player/image exports maincharacter/Jump right/Timeline 1_0001.png" id="15_2tcbr"]
+[ext_resource type="Texture2D" uid="uid://uguqm8wpjbib" path="res://art assets/Player/image exports maincharacter/Jump left/jumpleft_0000.png" id="16_55y74"]
+[ext_resource type="Texture2D" uid="uid://63bcq3dnnvch" path="res://art assets/Player/image exports maincharacter/Jump right/startup right_0000.png" id="17_vchmf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yqn7q"]
 animations = [{
@@ -106,6 +108,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("16_55y74")
+}],
+"loop": true,
+"name": &"startup left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_vchmf")
+}],
+"loop": true,
+"name": &"startup right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("7_xec76")
 }, {
 "duration": 1.0,
@@ -150,7 +168,7 @@ script = ExtResource("1_bfcxh")
 position = Vector2(43, -43)
 scale = Vector2(1.67188, 1.67188)
 sprite_frames = SubResource("SpriteFrames_yqn7q")
-animation = &"fall right down"
+animation = &"startup right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(44, -52)
