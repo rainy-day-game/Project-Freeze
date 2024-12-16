@@ -20,20 +20,25 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
+	
 	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		if (direction > 0):
-			animated_sprite.play("walk right")
-			last_direction = 1
-		elif (direction < 0):
-			animated_sprite.play("walk left")
-			last_direction = -1
+	apply_movement_anim(direction)
+	move_and_slide()
+
+func apply_movement_anim(direction):
+	'''Takes direction moving, and appplies the movement and animation'''
+	
+	if (direction > 0): # Moving to the right
+		animated_sprite.play("walk right")
+		last_direction = 1
 		velocity.x = direction * SPEED
-	else:
+	elif (direction < 0): # Moving to the left
+		animated_sprite.play("walk left")
+		last_direction = -1
+		velocity.x = direction * SPEED
+	else: # Idle
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if (last_direction == 1):
 			animated_sprite.play("idle right")
 		else:
 			animated_sprite.play("idle left")
-
-	move_and_slide()

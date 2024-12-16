@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dy87mx71j0ikl"]
+[gd_scene load_steps=11 format=3 uid="uid://dy87mx71j0ikl"]
 
 [ext_resource type="Texture2D" uid="uid://yrpmbwkvax6q" path="res://art assets/test area/Back Ground_0000.png" id="1_h8efg"]
-[ext_resource type="Texture2D" uid="uid://dnux871ybw5qv" path="res://art assets/test area/foreground_0000.png" id="2_w2yuy"]
 [ext_resource type="Texture2D" uid="uid://dta7fbeutng8b" path="res://art assets/Command prompt images/blackscreen_0000.png" id="3_svcwv"]
-[ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://testanimnode.tscn" id="3_tvr3j"]
+[ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Player.tscn" id="3_tvr3j"]
 [ext_resource type="Texture2D" uid="uid://wm68p5od4q5o" path="res://art assets/Command prompt images/blackscreen_0001.png" id="4_5684x"]
 [ext_resource type="Texture2D" uid="uid://clu4q4hjexgx7" path="res://art assets/Command prompt images/blackscreen_0002.png" id="5_gvtfr"]
 [ext_resource type="Texture2D" uid="uid://csyg1b5sr23gf" path="res://art assets/Command prompt images/blackscreen_0003.png" id="6_m55ub"]
@@ -42,17 +41,6 @@ animations = [{
 
 [node name="Room1" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(577.167, 322.5)
-scale = Vector2(0.902865, 0.898611)
-texture = ExtResource("1_h8efg")
-
-[node name="Foreground0000" type="Sprite2D" parent="."]
-z_index = 2
-position = Vector2(725, 283)
-scale = Vector2(1.05556, 1.05556)
-texture = ExtResource("2_w2yuy")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 325)
 
@@ -71,3 +59,8 @@ position = Vector2(-16, 579)
 position = Vector2(389, 605)
 scale = Vector2(1, 1.10662)
 polygon = PackedVector2Array(-384, 11.106, -328, 5.68408, -262, 5.68408, 30.0865, 1.94385, 61, -10, 92, -4.2561, 115, 4.7804, 177, 6.58771, 237, 0.262146, 257, 7.49139, 271, 5.68408, 324, 6.58771, 354, 11.106, 389, 20.1425, 438, 17.4316, 475, 30.9864, 532, 13.817, 565, 39.1193, 681.814, 19.6649, 736, 13.817, 753, 19.2389, 768, 32.7937, 683, 23.7571, 656, 21.9498, 566, 38.2156, 486, 33.6974, 469, 43.6376, 391, 30.9864, 257, 9.29871, 165, 10.2023, 66, 7, -282, 6.58771, -328, 6.58771)
+
+[node name="BackGround0000" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(583, 307)
+texture = ExtResource("1_h8efg")

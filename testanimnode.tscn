@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b3rcve8ampq0s"]
+[gd_scene load_steps=21 format=3 uid="uid://17vt8eyb4027"]
 
 [ext_resource type="Texture2D" uid="uid://j5djthff4as5" path="res://art assets/snow fall effect/Snowfall images/snow fall_0000.png" id="1_2jwxl"]
 [ext_resource type="Texture2D" uid="uid://cp2oidclamlpi" path="res://art assets/snow fall effect/Snowfall images/snow fall_0001.png" id="2_yb2mw"]
@@ -120,12 +120,17 @@ animations = [{
 [node name="Snowfall Effect" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Snowfall Effect"]
+position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_nbnw8")
 animation = &"snowfall"
-frame_progress = 0.256757
+autoplay = "snowfall"
+frame = 1
+frame_progress = 0.688923
 
 [node name="player" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
 sprite_frames = SubResource("SpriteFrames_yqn7q")
 animation = &"walk right"
+
+[node name="Camera2D" type="Camera2D" parent="."]
