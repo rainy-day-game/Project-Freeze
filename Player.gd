@@ -24,7 +24,7 @@ func _physics_process(delta):
 	
 	var direction = Input.get_axis("ui_left", "ui_right")
 	apply_movement_anim(direction)
-	apply_jump_anim(velocity)
+	apply_jump_anim(velocity) # Jump will override movement
 	move_and_slide()
 
 func apply_movement_anim(direction):
@@ -46,24 +46,25 @@ func apply_movement_anim(direction):
 			animated_sprite.play("idle left")
 			
 func apply_jump_anim(velocity):
+	'''Takes velocity, and determines whether to play squat, jump up, or fall down'''
 	if (velocity.y < 0): # Moving up
 		if (!started_jumping):
-			squat_timer.start(0.1)
+			squat_timer.start(0.1) # Start the squat timer
 			started_jumping = true
-		if (squat_timer.is_stopped()):
+		if (squat_timer.is_stopped()): # If squat timer has expired, play regular jump anim
 			if (last_direction == 1):
 				animated_sprite.play("jump right up")
 			else:
 				animated_sprite.play("jump left up")
-		else:
+		else: # Squat timer still going on, play the squatting animation
 			if (last_direction == 1):
 				animated_sprite.play("startup right")
 			else:
 				animated_sprite.play("startup left")
-	elif (velocity.y > 0):
+	elif (velocity.y > 0): # Falling down
 		if (last_direction == 1):
 			animated_sprite.play("fall right down")
 		else:
 			animated_sprite.play("fall left down")
 	else:
-		started_jumping = false
+		started_jumping = false # Jump has completed
