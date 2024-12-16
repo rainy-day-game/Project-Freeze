@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kqpsi1q38rky"
-path="res://.godot/imported/jump left_0003.png-1e9f6db81bad0bd6046ce6d0ddce1919.ctex"
+uid="uid://ba7k3e62vc5hq"
+path="res://.godot/imported/squat right_0000.png-57efc8c6cebd893662830eb8388d6f29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Player/image exports maincharacter/Jump left/jump left_0003.png"
-dest_files=["res://.godot/imported/jump left_0003.png-1e9f6db81bad0bd6046ce6d0ddce1919.ctex"]
+source_file="res://art assets/Player/image exports maincharacter/Jump right/squat right_0000.png"
+dest_files=["res://.godot/imported/squat right_0000.png-57efc8c6cebd893662830eb8388d6f29.ctex"]
 
 [params]
 
