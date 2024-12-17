@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp2oidclamlpi"
-path="res://.godot/imported/snow fall_0001.png-417b97ff4327f88401a06336cc72cca5.ctex"
+uid="uid://bwhdxysqyr4sh"
+path="res://.godot/imported/snow fall effect_0003.png-782e641872cc38fa0719ddfff1eedc11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/snow fall effect/Snowfall images/snow fall_0001.png"
-dest_files=["res://.godot/imported/snow fall_0001.png-417b97ff4327f88401a06336cc72cca5.ctex"]
+source_file="res://art assets/snow fall effect/Snowfall images/snow fall effect_0003.png"
+dest_files=["res://.godot/imported/snow fall effect_0003.png-782e641872cc38fa0719ddfff1eedc11.ctex"]
 
 [params]
 
