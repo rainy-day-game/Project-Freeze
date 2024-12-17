@@ -165,7 +165,7 @@ height = 150.0
 script = ExtResource("1_bfcxh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(43, -45)
+position = Vector2(43, -43)
 scale = Vector2(1.67188, 1.67188)
 sprite_frames = SubResource("SpriteFrames_yqn7q")
 animation = &"idle right"

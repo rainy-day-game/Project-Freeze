@@ -7,13 +7,13 @@ signal on_transition_finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(color_rect)
 	color_rect.visible = false
 	
 	
 func _on_animation_player_animation_finished(anim_name):
-	print("oh yeah")
+	
 	if (anim_name == "fade_in"):
+		print("fade in finished")
 		on_transition_finished.emit()
 		animation_player.play("fade_out")
 	elif (anim_name == "fade_out"):
@@ -30,6 +30,7 @@ func fade_in():
 	'''Fades from transparent to black'''
 	color_rect.visible = true
 	animation_player.play("fade_in")
+	print("WE ARE FADING IN!")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

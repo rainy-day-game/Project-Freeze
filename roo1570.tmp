@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dy87mx71j0ikl"]
+[gd_scene load_steps=14 format=3 uid="uid://dy87mx71j0ikl"]
 
 [ext_resource type="Texture2D" uid="uid://yrpmbwkvax6q" path="res://art assets/rooms/test area/Back Ground_0000.png" id="1_h8efg"]
 [ext_resource type="Texture2D" uid="uid://dta7fbeutng8b" path="res://art assets/Command prompt images/blackscreen_0000.png" id="3_svcwv"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bnye43k8hu8yn" path="res://art assets/Command prompt images/blackscreen_0005.png" id="8_wio51"]
 [ext_resource type="Texture2D" uid="uid://chwvufkfjqqyu" path="res://art assets/Command prompt images/blackscreen_0006.png" id="9_f54i2"]
 [ext_resource type="Script" path="res://transition.gd" id="10_gch5w"]
+[ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Transition/transition_screen.tscn" id="11_gnyjn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bvp71"]
 animations = [{
@@ -52,7 +53,6 @@ position = Vector2(577, 325)
 position = Vector2(-16, 579)
 sprite_frames = SubResource("SpriteFrames_bvp71")
 animation = &"Black screen"
-frame_progress = 0.27315
 
 [node name="Player" parent="." instance=ExtResource("3_tvr3j")]
 position = Vector2(-16, 579)
@@ -74,4 +74,7 @@ script = ExtResource("10_gch5w")
 position = Vector2(1138, 603)
 shape = SubResource("RectangleShape2D_bye51")
 
+[node name="TransitionScreen" parent="." instance=ExtResource("11_gnyjn")]
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="on_transition_finished" from="TransitionScreen" to="Area2D" method="_on_transition_screen_on_transition_finished"]
