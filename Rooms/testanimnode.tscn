@@ -1,9 +1,5 @@
-[gd_scene load_steps=21 format=3 uid="uid://17vt8eyb4027"]
+[gd_scene load_steps=17 format=3 uid="uid://17vt8eyb4027"]
 
-[ext_resource type="Texture2D" uid="uid://j5djthff4as5" path="res://art assets/snow fall effect/Snowfall images/snow fall_0000.png" id="1_5lrxd"]
-[ext_resource type="Texture2D" uid="uid://cp2oidclamlpi" path="res://art assets/snow fall effect/Snowfall images/snow fall_0001.png" id="2_ea6o0"]
-[ext_resource type="Texture2D" uid="uid://ni6kd5hn0o68" path="res://art assets/snow fall effect/Snowfall images/snow fall_0002.png" id="3_h12sj"]
-[ext_resource type="Texture2D" uid="uid://b34p1m1hrf1lt" path="res://art assets/snow fall effect/Snowfall images/snow fall_0004.png" id="4_6ngld"]
 [ext_resource type="Texture2D" uid="uid://dhrmy1dydb2fh" path="res://art assets/Player/image exports maincharacter/idle/idle left_0000.png" id="5_umv7k"]
 [ext_resource type="Texture2D" uid="uid://ji8mkndnp7m4" path="res://art assets/Player/image exports maincharacter/idle/idle left_0002.png" id="6_ttj5k"]
 [ext_resource type="Texture2D" uid="uid://t1i27ntvpbo5" path="res://art assets/Player/image exports maincharacter/idle/idle left_0004.png" id="7_f51e2"]
@@ -23,16 +19,16 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_5lrxd")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_ea6o0")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_h12sj")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_6ngld")
+"texture": null
 }],
 "loop": true,
 "name": &"snowfall",
