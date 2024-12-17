@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iuejs2t52vh1"
-path="res://.godot/imported/Timeline 1_0002.png-14b7f4e2b3456d34d779575b643d955e.ctex"
+uid="uid://bmf125aiuc5mo"
+path="res://.godot/imported/jump left_0002.png-12efb3579cd157a473a6340d1cad5223.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Player/image exports maincharacter/Jump left/Timeline 1_0002.png"
-dest_files=["res://.godot/imported/Timeline 1_0002.png-14b7f4e2b3456d34d779575b643d955e.ctex"]
+source_file="res://art assets/Player/image exports maincharacter/Jump left/jump left_0002.png"
+dest_files=["res://.godot/imported/jump left_0002.png-12efb3579cd157a473a6340d1cad5223.ctex"]
 
 [params]
 
