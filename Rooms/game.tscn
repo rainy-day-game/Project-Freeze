@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://bm531njt8s3bx"]
 
-[ext_resource type="Script" path="res://game.gd" id="1_ilyca"]
-[ext_resource type="Texture2D" uid="uid://83rlb0gmq5dv" path="res://icon.svg" id="1_pl3f2"]
-[ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Player.tscn" id="2_6x3u5"]
-[ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Transition/transition_screen.tscn" id="2_tfmlv"]
+[ext_resource type="Script" path="res://Rooms/Scripts/game.gd" id="1_ai1it"]
+[ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="2_66tak"]
+[ext_resource type="Texture2D" uid="uid://83rlb0gmq5dv" path="res://icon.svg" id="3_sltw3"]
+[ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="4_ms40l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltrms"]
 size = Vector2(44, 686)
@@ -15,9 +15,9 @@ size = Vector2(1146, 108)
 size = Vector2(328, 52)
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_ilyca")
+script = ExtResource("1_ai1it")
 
-[node name="Player" parent="." instance=ExtResource("2_6x3u5")]
+[node name="Player" parent="." instance=ExtResource("2_66tak")]
 position = Vector2(-76, 175)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -36,7 +36,7 @@ editor_draw_limits = true
 [node name="Icon" type="Sprite2D" parent="Floors/StaticBody2D"]
 position = Vector2(-333, -4)
 scale = Vector2(0.359375, 5.29688)
-texture = ExtResource("1_pl3f2")
+texture = ExtResource("3_sltw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/StaticBody2D"]
 position = Vector2(-334, 12)
@@ -47,7 +47,7 @@ shape = SubResource("RectangleShape2D_ltrms")
 [node name="Icon2" type="Sprite2D" parent="Floors/StaticBody2D2"]
 position = Vector2(237.001, 497.318)
 scale = Vector2(9.29638, 3.71377)
-texture = ExtResource("1_pl3f2")
+texture = ExtResource("3_sltw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/StaticBody2D2"]
 position = Vector2(260, 316)
@@ -58,10 +58,10 @@ shape = SubResource("RectangleShape2D_j1f7m")
 [node name="Icon" type="Sprite2D" parent="Floors/StaticBody2D3"]
 position = Vector2(410, 161)
 scale = Vector2(2.58594, 0.402344)
-texture = ExtResource("1_pl3f2")
+texture = ExtResource("3_sltw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/StaticBody2D3"]
 position = Vector2(409, 163)
 shape = SubResource("RectangleShape2D_7o2yl")
 
-[node name="TransitionScreen" parent="." instance=ExtResource("2_tfmlv")]
+[node name="TransitionScreen" parent="." instance=ExtResource("4_ms40l")]

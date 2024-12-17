@@ -12,4 +12,7 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	get_tree().change_scene_to_file("res://game.tscn")
+	TransitionScreen.fade_in()
+	await TransitionScreen.on_transition_finished
+	get_tree().change_scene_to_file("res://Rooms/game.tscn")
+
