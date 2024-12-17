@@ -18,6 +18,7 @@ func _on_animation_player_animation_finished(anim_name):
 		animation_player.play("fade_out")
 	elif (anim_name == "fade_out"):
 		color_rect.visible = false
+		print("Faded out")
 		
 
 func fade_out():
