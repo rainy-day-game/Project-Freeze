@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1de5scj173j1"]
+[gd_scene load_steps=2 format=3 uid="uid://dqgf3prm4s6gs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d83cj"]
 animations = [{
@@ -20,7 +20,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Snow" type="AnimatedSprite2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 modulate = Color(1, 1, 1, 0.533333)
 position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_d83cj")
