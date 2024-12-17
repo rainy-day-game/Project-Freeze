@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://bps35njt4w58n" path="res://Title/PENAKUT.TTF" id="1_nbhi0"]
 [ext_resource type="Texture2D" uid="uid://yrpmbwkvax6q" path="res://art assets/rooms/test area/Back Ground_0000.png" id="2_lo4sh"]
-[ext_resource type="PackedScene" uid="uid://c1de5scj173j1" path="res://Scene Assets/Snow.tscn" id="3_0e740"]
+[ext_resource type="PackedScene" uid="uid://dqgf3prm4s6gs" path="res://Scene Assets/Snow.tscn" id="3_0e740"]
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="4_cmds2"]
 
 [node name="Title" type="Node2D"]
