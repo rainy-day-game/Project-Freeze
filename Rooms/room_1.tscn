@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://chwvufkfjqqyu" path="res://art assets/Command prompt images/blackscreen_0006.png" id="8_osbfr"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="9_w8ymp"]
 [ext_resource type="Texture2D" uid="uid://yrpmbwkvax6q" path="res://art assets/rooms/test area/Back Ground_0000.png" id="10_d7gps"]
-[ext_resource type="PackedScene" uid="uid://bm07c85i13exa" path="res://Scene Assets/transition_trigger.tscn" id="11_ewnfo"]
+[ext_resource type="PackedScene" uid="uid://1ajjnb7ts3if" path="res://Scene Assets/room_transition_trigger.tscn" id="11_i5cay"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bvp71"]
 animations = [{
@@ -45,29 +45,62 @@ animations = [{
 
 [node name="TransitionScreen" parent="." instance=ExtResource("1_e44gc")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(577, 325)
-
 [node name="Command screen" type="AnimatedSprite2D" parent="."]
 position = Vector2(-16, 579)
 sprite_frames = SubResource("SpriteFrames_bvp71")
 animation = &"Black screen"
 frame_progress = 0.133406
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 325)
+
 [node name="Player" parent="." instance=ExtResource("9_w8ymp")]
-position = Vector2(-9, 622)
+position = Vector2(63, 565)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(2, 633, 339, 633, 413, 626, 470, 621, 561, 622, 865, 647, 985, 663, 1111, 662, 1217, 659, 1221, 661, 1, 720)
-
-[node name="BackGround0000" type="Sprite2D" parent="."]
+[node name="Room 1" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(576.778, 325.25)
-scale = Vector2(0.902083, 0.902083)
+position = Vector2(577, 325)
+scale = Vector2(0.901215, 0.901389)
 texture = ExtResource("10_d7gps")
 
-[node name="TransitionTrigger" parent="." instance=ExtResource("11_ewnfo")]
-position = Vector2(1170, 593)
-scene_name = "game"
+[node name="StaticBody2D" type="StaticBody2D" parent="Room 1"]
+position = Vector2(-640.247, -360.555)
+scale = Vector2(1.10961, 1.1094)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room 1/StaticBody2D"]
+polygon = PackedVector2Array(2, 633, 339, 633, 413, 626, 470, 621, 561, 622, 865, 647, 985, 663, 1143, 655, 1217, 659, 1221, 661, 1, 720)
+
+[node name="RoomTransitionTrigger" parent="Room 1" node_paths=PackedStringArray("next_room", "spawn_point") instance=ExtResource("11_i5cay")]
+position = Vector2(724.577, 299.538)
+scale = Vector2(1.10961, 1.1094)
+next_room = NodePath("../../Room 2")
+spawn_point = NodePath("../../Room 2/Spawn Point 1")
+
+[node name="Spawn Point 2" type="Node2D" parent="Room 1"]
+position = Vector2(635.808, 347.242)
+
+[node name="Room 2" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(2092, 325.5)
+rotation = -3.14159
+scale = Vector2(0.901, 0.901)
+texture = ExtResource("10_d7gps")
+
+[node name="Spawn Point 1" type="Node2D" parent="Room 2"]
+position = Vector2(639.289, -346.839)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Room 2"]
+position = Vector2(-640.247, -360.555)
+scale = Vector2(1.10961, 1.1094)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room 2/StaticBody2D"]
+position = Vector2(-28.1435, 653.643)
+rotation = -3.14159
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(2, 633, 339, 633, 413, 626, 470, 621, 561, 622, 865, 647, 985, 663, 1111, 662, 1217, 659, 1481.35, 665.291, 1, 720)
+
+[node name="RoomTransitionTrigger" parent="Room 2" node_paths=PackedStringArray("next_room", "spawn_point") instance=ExtResource("11_i5cay")]
+position = Vector2(704.772, -296.894)
+scale = Vector2(1.10961, 1.1094)
+next_room = NodePath("../../Room 1")
+spawn_point = NodePath("../../Room 1/Spawn Point 2")
