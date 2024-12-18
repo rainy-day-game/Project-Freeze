@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://bps35njt4w58n" path="res://Title/PENAKUT.TTF" id="1_nbhi0"]
 [ext_resource type="Texture2D" uid="uid://yrpmbwkvax6q" path="res://art assets/rooms/test area/Back Ground_0000.png" id="2_lo4sh"]
-[ext_resource type="PackedScene" uid="uid://c1de5scj173j1" path="res://Scene Assets/Snow.tscn" id="3_0e740"]
+[ext_resource type="PackedScene" uid="uid://dqgf3prm4s6gs" path="res://Scene Assets/Snow.tscn" id="3_0e740"]
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="4_cmds2"]
 [ext_resource type="Script" path="res://Title/title.gd" id="4_dhy35"]
 
@@ -19,13 +19,14 @@ position = Vector2(594, 313)
 metadata/_edit_lock_ = true
 
 [node name="Title Assets" type="Node2D" parent="."]
+position = Vector2(-123, -143)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Title Assets"]
 z_index = 2
-offset_left = 133.0
-offset_top = 162.0
-offset_right = 542.0
-offset_bottom = 254.0
+offset_left = 160.0
+offset_top = 193.0
+offset_right = 569.0
+offset_bottom = 285.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -34,10 +35,10 @@ theme_override_font_sizes/normal_font_size = 61
 text = "Project Freeze"
 
 [node name="Button" type="Button" parent="Title Assets"]
-offset_left = 154.0
-offset_top = 374.0
-offset_right = 449.0
-offset_bottom = 485.0
+offset_left = 184.0
+offset_top = 297.0
+offset_right = 479.0
+offset_bottom = 408.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.172833, 0.172833, 0.172833, 1)
 theme_override_constants/outline_size = 5
