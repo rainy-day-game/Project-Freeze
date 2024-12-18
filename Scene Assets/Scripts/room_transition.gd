@@ -19,3 +19,4 @@ func _on_body_entered(body):
 		print("transition")
 		camera.position = next_room.position
 		player.position.x = spawn_point.global_position.x
+		print(camera.get_child(0).preprocess)

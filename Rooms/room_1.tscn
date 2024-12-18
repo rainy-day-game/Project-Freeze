@@ -1,15 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://dy87mx71j0ikl"]
+[gd_scene load_steps=14 format=3 uid="uid://dy87mx71j0ikl"]
 
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="1_e44gc"]
-[ext_resource type="Texture2D" uid="uid://dta7fbeutng8b" path="res://art assets/Command prompt images/blackscreen_0000.png" id="2_0xbyx"]
-[ext_resource type="Texture2D" uid="uid://wm68p5od4q5o" path="res://art assets/Command prompt images/blackscreen_0001.png" id="3_tctky"]
-[ext_resource type="Texture2D" uid="uid://clu4q4hjexgx7" path="res://art assets/Command prompt images/blackscreen_0002.png" id="4_mbyv2"]
-[ext_resource type="Texture2D" uid="uid://csyg1b5sr23gf" path="res://art assets/Command prompt images/blackscreen_0003.png" id="5_yl2o2"]
-[ext_resource type="Texture2D" uid="uid://jd0jpv2ectdf" path="res://art assets/Command prompt images/blackscreen_0004.png" id="6_1vpd3"]
-[ext_resource type="Texture2D" uid="uid://bnye43k8hu8yn" path="res://art assets/Command prompt images/blackscreen_0005.png" id="7_plpdk"]
-[ext_resource type="Texture2D" uid="uid://chwvufkfjqqyu" path="res://art assets/Command prompt images/blackscreen_0006.png" id="8_osbfr"]
+[ext_resource type="Texture2D" uid="uid://coqd7e2v6a8xc" path="res://art assets/Command prompt images/blackscreen_0000.png" id="2_0xbyx"]
+[ext_resource type="Texture2D" uid="uid://bilov2vqsr4cm" path="res://art assets/Command prompt images/blackscreen_0001.png" id="3_tctky"]
+[ext_resource type="Texture2D" uid="uid://iepchxcu6u1a" path="res://art assets/Command prompt images/blackscreen_0002.png" id="4_mbyv2"]
+[ext_resource type="Texture2D" uid="uid://dx8gw0m24xnj3" path="res://art assets/Command prompt images/blackscreen_0003.png" id="5_yl2o2"]
+[ext_resource type="Texture2D" uid="uid://dqibk55a15xun" path="res://art assets/Command prompt images/blackscreen_0004.png" id="6_1vpd3"]
+[ext_resource type="Texture2D" uid="uid://ciurvavlnhetc" path="res://art assets/Command prompt images/blackscreen_0005.png" id="7_plpdk"]
+[ext_resource type="Texture2D" uid="uid://ccuotnrxff3dw" path="res://art assets/Command prompt images/blackscreen_0006.png" id="8_osbfr"]
+[ext_resource type="PackedScene" uid="uid://dpv01x6bshd0m" path="res://Scene Assets/Snow_Test.tscn" id="9_g66en"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="9_w8ymp"]
-[ext_resource type="Texture2D" uid="uid://yrpmbwkvax6q" path="res://art assets/rooms/test area/Back Ground_0000.png" id="10_d7gps"]
+[ext_resource type="Texture2D" uid="uid://idxfedxg73tj" path="res://art assets/rooms/test area/Back Ground_0000.png" id="10_d7gps"]
 [ext_resource type="PackedScene" uid="uid://1ajjnb7ts3if" path="res://Scene Assets/room_transition_trigger.tscn" id="11_i5cay"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bvp71"]
@@ -46,13 +47,17 @@ animations = [{
 [node name="TransitionScreen" parent="." instance=ExtResource("1_e44gc")]
 
 [node name="Command screen" type="AnimatedSprite2D" parent="."]
-position = Vector2(-16, 579)
+position = Vector2(-296, 174)
 sprite_frames = SubResource("SpriteFrames_bvp71")
 animation = &"Black screen"
+autoplay = "Black screen"
 frame_progress = 0.133406
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 325)
+
+[node name="SnowTest" parent="Camera2D" instance=ExtResource("9_g66en")]
+position = Vector2(-8, -328)
 
 [node name="Player" parent="." instance=ExtResource("9_w8ymp")]
 position = Vector2(63, 565)
