@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dijyxs662ai8l"]
+
+[ext_resource type="Texture2D" uid="uid://dl7u4x0ieam0d" path="res://art assets/rooms/mountain pass/Mountain Pass_0000.png" id="1_glh81"]
+[ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="2_7wv68"]
+[ext_resource type="PackedScene" uid="uid://cfs2g24c1oh5t" path="res://Snow.tscn" id="3_y565d"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5vcfa"]
+
+[node name="Room2" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(761, 312)
+physics_material_override = SubResource("PhysicsMaterial_5vcfa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-120, -63)
+scale = Vector2(0.770883, 1)
+polygon = PackedVector2Array(-861.349, 352, -616.176, 307, -481.266, 305, -364.517, 325, -255.551, 299, -141.396, 282, -60.969, 314, 83.0217, 325, 208.851, 317, 320.412, 349, 482.563, 368, 596.718, 329, 714.764, 304, 651, 499, 242.66, 489.478, -807, 465)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 327)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 325.5)
+scale = Vector2(0.747396, 0.748843)
+texture = ExtResource("1_glh81")
+
+[node name="Player" parent="." instance=ExtResource("2_7wv68")]
+position = Vector2(-3, 554)
+
+[node name="Snow" parent="." instance=ExtResource("3_y565d")]
+position = Vector2(582, 360)
+scale = Vector2(0.898438, 1.00833)
+frame_progress = 0.172008
