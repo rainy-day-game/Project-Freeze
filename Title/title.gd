@@ -17,3 +17,7 @@ func _on_body_entered(body):
 func _on_transition_screen_on_transition_finished():
 	print("test")
 	get_tree().change_scene_to_file("res://game.tscn")
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file("res://Rooms/room_1.tscn")
