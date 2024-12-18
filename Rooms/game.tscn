@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bm531njt8s3bx"]
+[gd_scene load_steps=9 format=3 uid="uid://bm531njt8s3bx"]
 
 [ext_resource type="Script" path="res://Rooms/Scripts/game.gd" id="1_ai1it"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="2_66tak"]
 [ext_resource type="Texture2D" uid="uid://83rlb0gmq5dv" path="res://icon.svg" id="3_sltw3"]
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="4_ms40l"]
+[ext_resource type="PackedScene" uid="uid://bm07c85i13exa" path="res://Scene Assets/transition_trigger.tscn" id="5_bji4q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltrms"]
 size = Vector2(44, 686)
@@ -18,7 +19,7 @@ size = Vector2(328, 52)
 script = ExtResource("1_ai1it")
 
 [node name="Player" parent="." instance=ExtResource("2_66tak")]
-position = Vector2(-76, 175)
+position = Vector2(52, -145)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(41.9087, 67.9644)
@@ -65,3 +66,7 @@ position = Vector2(409, 163)
 shape = SubResource("RectangleShape2D_7o2yl")
 
 [node name="TransitionScreen" parent="." instance=ExtResource("4_ms40l")]
+
+[node name="TransitionTrigger" parent="." instance=ExtResource("5_bji4q")]
+position = Vector2(-288, 201)
+scene_name = "room_1"

@@ -1,5 +1,7 @@
 extends Area2D
 
+@export var scene_name : String
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,6 +14,7 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	TransitionScreen.fade_in()
-	await TransitionScreen.on_transition_finished
-	get_tree().change_scene_to_file("res://Rooms/game.tscn")
+	if (body.name == "Player"):
+		TransitionScreen.fade_in()
+		await TransitionScreen.on_transition_finished
+		get_tree().change_scene_to_file("res://Rooms/" + scene_name + ".tscn")
