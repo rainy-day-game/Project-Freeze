@@ -1,23 +1,100 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqgf3prm4s6gs"]
+[gd_scene load_steps=24 format=3 uid="uid://bhb1qsh4wfaph"]
+
+[ext_resource type="Texture2D" uid="uid://dooyqi4lrw7vh" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0000.png" id="1_sgyke"]
+[ext_resource type="Texture2D" uid="uid://j31hmo7gs3ri" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0001.png" id="2_03y3p"]
+[ext_resource type="Texture2D" uid="uid://dktpxhr8bx5bu" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0002.png" id="3_3u03r"]
+[ext_resource type="Texture2D" uid="uid://blhaxuebm3gvg" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0003.png" id="4_j5vxo"]
+[ext_resource type="Texture2D" uid="uid://qqf3st3xicfq" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0004.png" id="5_asxka"]
+[ext_resource type="Texture2D" uid="uid://drvv1ux4o6ikk" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0005.png" id="6_xnbs6"]
+[ext_resource type="Texture2D" uid="uid://nrm80ycqeqe7" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0006.png" id="7_m3b4v"]
+[ext_resource type="Texture2D" uid="uid://deai00g68vkuc" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0007.png" id="8_jkoy1"]
+[ext_resource type="Texture2D" uid="uid://bajadq8vo1sy1" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0008.png" id="9_2gn7f"]
+[ext_resource type="Texture2D" uid="uid://bvhs28o0e1mkt" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0009.png" id="10_414ql"]
+[ext_resource type="Texture2D" uid="uid://b07imaq0ij6mt" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0010.png" id="11_pislm"]
+[ext_resource type="Texture2D" uid="uid://c1ka8nl08ssbn" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0011.png" id="12_x0i7i"]
+[ext_resource type="Texture2D" uid="uid://caqxfpedtcfeh" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0012.png" id="13_5to0l"]
+[ext_resource type="Texture2D" uid="uid://jw0i3otkrik3" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0013.png" id="14_ne6vh"]
+[ext_resource type="Texture2D" uid="uid://bi688sfgh3kuy" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0014.png" id="15_aartw"]
+[ext_resource type="Texture2D" uid="uid://dfm40tdomh6id" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0015.png" id="16_jc5bj"]
+[ext_resource type="Texture2D" uid="uid://cvgwsga2bl3xq" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0016.png" id="17_h77hn"]
+[ext_resource type="Texture2D" uid="uid://bem5nxtqq7x0q" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0017.png" id="18_iqr0y"]
+[ext_resource type="Texture2D" uid="uid://bllakqmy6btn6" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0018.png" id="19_f1h7m"]
+[ext_resource type="Texture2D" uid="uid://n87qty0ebe0h" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0019.png" id="20_01yjf"]
+[ext_resource type="Texture2D" uid="uid://bcg72c5rn7bn4" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0020.png" id="21_o448b"]
+[ext_resource type="Texture2D" uid="uid://cvaeny2aajmap" path="res://art assets/snow fall effect/Snowfall images/snow fall effect_0021.png" id="22_65n3m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d83cj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("1_sgyke")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("2_03y3p")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("3_3u03r")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("4_j5vxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_asxka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xnbs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_m3b4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jkoy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2gn7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_414ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pislm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x0i7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5to0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ne6vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_aartw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jc5bj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_h77hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_iqr0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_f1h7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_01yjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_o448b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_65n3m")
 }],
 "loop": true,
 "name": &"snowfall",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Snow" type="AnimatedSprite2D"]
@@ -25,4 +102,5 @@ modulate = Color(1, 1, 1, 0.533333)
 position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_d83cj")
 animation = &"snowfall"
-frame_progress = 0.074664
+autoplay = "snowfall"
+frame_progress = 0.320342
