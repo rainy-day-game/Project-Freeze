@@ -5,7 +5,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="SnowTest" type="CPUParticles2D"]
 top_level = true
-amount = 203
+amount = 2000
 lifetime = 20.0
 preprocess = 21.28
 emission_shape = 3
