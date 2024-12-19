@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpv01x6bshd0m"]
+
+[sub_resource type="Gradient" id="Gradient_6c4al"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="SnowTest" type="CPUParticles2D"]
+top_level = true
+amount = 203
+lifetime = 20.0
+preprocess = 21.28
+emission_shape = 3
+emission_rect_extents = Vector2(3000, 1)
+gravity = Vector2(0, 41.185)
+radial_accel_min = -1.0
+radial_accel_max = -1.0
+damping_min = 5.0
+damping_max = 5.0
+scale_amount_min = 4.0
+scale_amount_max = 7.0
+color_ramp = SubResource("Gradient_6c4al")
