@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://56apjaokhlgu"]
 
 [ext_resource type="FontFile" uid="uid://bps35njt4w58n" path="res://Title/PENAKUT.TTF" id="1_nbhi0"]
-[ext_resource type="Texture2D" uid="uid://idxfedxg73tj" path="res://art assets/rooms/test area/Back Ground_0000.png" id="2_lo4sh"]
-[ext_resource type="PackedScene" uid="uid://dqgf3prm4s6gs" path="res://Scene Assets/Snow.tscn" id="3_0e740"]
+[ext_resource type="Texture2D" uid="uid://b85cpyec250mq" path="res://art assets/rooms/test area/Back Ground_0000.png" id="2_lo4sh"]
+[ext_resource type="PackedScene" uid="uid://bhb1qsh4wfaph" path="res://Scene Assets/Snow.tscn" id="3_0e740"]
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="4_cmds2"]
 [ext_resource type="Script" path="res://Title/title.gd" id="4_dhy35"]
 

@@ -4,11 +4,12 @@
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="SnowTest" type="CPUParticles2D"]
+top_level = true
 amount = 203
 lifetime = 20.0
-preprocess = 18.18
+preprocess = 21.28
 emission_shape = 3
-emission_rect_extents = Vector2(550, 1)
+emission_rect_extents = Vector2(3000, 1)
 gravity = Vector2(0, 41.185)
 radial_accel_min = -1.0
 radial_accel_max = -1.0
