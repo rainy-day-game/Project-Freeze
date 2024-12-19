@@ -1,27 +1,8 @@
-[gd_scene format=3 uid="uid://cnwobfcpkanr3"]
+[gd_scene load_steps=2 format=3 uid="uid://cnwobfcpkanr3"]
+
+[ext_resource type="Texture2D" uid="uid://bfmknpcukc7qs" path="res://art assets/Command prompt images/command prompt_0000.png" id="1_3mild"]
 
 [node name="text" type="Node2D"]
 
-[node name="ColorRect3" type="ColorRect" parent="."]
-offset_left = 55.0
-offset_top = 30.0
-offset_right = 95.0
-offset_bottom = 70.0
-scale = Vector2(9.91917, 4.31711)
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 56.0
-offset_top = 31.0
-offset_right = 96.0
-offset_bottom = 71.0
-scale = Vector2(9.88024, 4.27873)
-color = Color(0.129558, 0.129558, 0.129558, 1)
-metadata/_edit_lock_ = true
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 56.0
-offset_top = 23.0
-offset_right = 96.0
-offset_bottom = 63.0
-scale = Vector2(0.995336, 0.979649)
-color = Color(0.129412, 0.129412, 0.129412, 1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3mild")
