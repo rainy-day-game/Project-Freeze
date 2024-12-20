@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cyee4w5mm838s"]
+[gd_scene load_steps=26 format=3 uid="uid://cyee4w5mm838s"]
 
 [ext_resource type="Texture2D" uid="uid://63diolmtv5vc" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
 [ext_resource type="Script" path="res://Rooms/Scripts/opening.gd" id="1_x354r"]
@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://cbyqs7lkh7xa7" path="res://Scene Assets/text.tscn" id="9_t3ysp"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="10_cqrww"]
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="11_gn1ss"]
+[ext_resource type="AudioStream" uid="uid://cu71d8u3x7vph" path="res://art assets/rooms/~ assets/151705__gnrja__ocean-waves-3.wav" id="13_p3jxu"]
+[ext_resource type="Texture2D" uid="uid://cg01sswd5k6gs" path="res://art assets/rooms/mountain pass/Mountain Pass_0000.png" id="14_psu2n"]
+[ext_resource type="PackedScene" uid="uid://1ajjnb7ts3if" path="res://Scene Assets/room_transition_trigger.tscn" id="15_mhrnq"]
+[ext_resource type="AudioStream" uid="uid://c63com5t7q3yx" path="res://art assets/rooms/~ assets/555062__magnuswaker__cold-wind-loop.wav" id="16_p6ear"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uooop"]
 animations = [{
@@ -47,7 +51,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 3.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d04dr"]
@@ -82,26 +86,62 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Command Prompt:position")
+tracks/2/path = NodePath("Camera2D/Command Prompt:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-79, -163)]
+"values": [Vector2(0.75, 1e-05)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Command Prompt:scale")
+tracks/3/path = NodePath("Camera2D/Command Prompt:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(-347.8, -148.25)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Area 1/AudioStreamPlayer2D:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-2.811]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/AudioStreamPlayer2D:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-13.117]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/AudioStreamPlayer2D:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_50jbo"]
@@ -129,31 +169,31 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.733333),
 "transitions": PackedFloat32Array(0.392, 1),
 "update": 0,
-"values": [Vector2(284.8, -5.72), Vector2(400, 116.585)]
+"values": [Vector2(284.8, -5.72), Vector2(375.18, 116.585)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Command Prompt:position")
+tracks/2/path = NodePath("Camera2D/Command Prompt:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.733333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-79, -163), Vector2(593.865, 35.555)]
+"values": [Vector2(0, 0), Vector2(0.551, 0.551)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Command Prompt:scale")
+tracks/3/path = NodePath("Camera2D/Command Prompt:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.733333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0.551, 0.551)]
+"values": [Vector2(-369.8, -143.28), Vector2(206.82, -80.585)]
 }
 
 [sub_resource type="Animation" id="Animation_61nv7"]
@@ -186,85 +226,168 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Command Prompt:position")
+tracks/2/path = NodePath("Camera2D/Command Prompt:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.733333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(593.865, 35.555), Vector2(-79, -163)]
+"values": [Vector2(0.551, 0.551), Vector2(0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Command Prompt:scale")
+tracks/3/path = NodePath("Camera2D/Command Prompt:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.733333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.551, 0.551), Vector2(0, 0)]
+"values": [Vector2(593.865, 35.555), Vector2(-369.8, -143.28)]
+}
+
+[sub_resource type="Animation" id="Animation_iu2ah"]
+resource_name = "audio_fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area 1/AudioStreamPlayer2D:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-2.811, -25.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/AudioStreamPlayer2D:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-25.0, -13.117]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1dfk2"]
 _data = {
 "RESET": SubResource("Animation_llab4"),
+"audio_fade_out": SubResource("Animation_iu2ah"),
 "camera": SubResource("Animation_50jbo"),
 "camera_rev": SubResource("Animation_61nv7")
 }
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f5apu"]
+
 [node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("10_cqrww")]
+z_index = 1
+position = Vector2(102, 229)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(284.8, -5.72)
+
+[node name="Command Prompt" parent="Camera2D" instance=ExtResource("9_t3ysp")]
+z_index = 10
+position = Vector2(-347.8, -148.25)
+scale = Vector2(0.75, 1e-05)
+
+[node name="Area 1" type="Node2D" parent="."]
 script = ExtResource("1_x354r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="Area 1"]
 position = Vector2(285, -9)
 scale = Vector2(0.76, 0.76)
 texture = ExtResource("1_c2ytx")
 
-[node name="shimmer" type="AnimatedSprite2D" parent="Sprite2D"]
+[node name="shimmer" type="AnimatedSprite2D" parent="Area 1/Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_uooop")
 animation = &"shimmer"
 autoplay = "shimmer"
 frame_progress = 0.811276
 
-[node name="body" type="AnimatedSprite2D" parent="Sprite2D"]
+[node name="body" type="AnimatedSprite2D" parent="Area 1/Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_g5hsu")
 frame_progress = 0.140451
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(284.8, -5.72)
-scale = Vector2(5.57259, 6.63888)
+[node name="StaticBody2D" type="StaticBody2D" parent="Area 1"]
 
-[node name="Command Prompt" parent="." instance=ExtResource("9_t3ysp")]
-z_index = 10
-position = Vector2(-79, -163)
-scale = Vector2(1e-05, 1e-05)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area 1/StaticBody2D"]
+polygon = PackedVector2Array(-149, 319, -118.46, 318.668, -20, 295, 143, 305, 248, 309, 418, 293, 555, 301, 636, 306, 721, 305, 806, 291, 960, 268, 867, 404, -109, 406)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-149, 319, -118.46, 318.668, -20, 295, 143, 305, 248, 309, 418, 293, 555, 301, 636, 306, 721, 305, 806, 291, 871, 280, 867, 404, -109, 406)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area 1/StaticBody2D"]
 position = Vector2(-170, -8.5)
 shape = SubResource("RectangleShape2D_d04dr")
 
-[node name="Player" parent="." instance=ExtResource("10_cqrww")]
-position = Vector2(102, 229)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area 1"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_1dfk2")
 }
 
-[node name="TransitionScreen" parent="." instance=ExtResource("11_gn1ss")]
+[node name="TransitionScreen" parent="Area 1" instance=ExtResource("11_gn1ss")]
 
-[node name="Cutscene Timer" type="Timer" parent="."]
+[node name="Cutscene Timer" type="Timer" parent="Area 1"]
 one_shot = true
 
-[node name="Target" type="Node2D" parent="."]
+[node name="Target" type="Node2D" parent="Area 1"]
 position = Vector2(428, 264)
 
-[connection signal="timeout" from="Cutscene Timer" to="." method="_on_cutscene_timer_timeout"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area 1"]
+stream = ExtResource("13_p3jxu")
+volume_db = -2.811
+autoplay = true
+max_distance = 1e+08
+
+[node name="RoomTransitionTrigger" parent="Area 1" node_paths=PackedStringArray("next_room", "spawn_point") instance=ExtResource("15_mhrnq")]
+position = Vector2(944, 188)
+next_room = NodePath("../../Node2D/Sprite2D")
+spawn_point = NodePath("../../Node2D/Spawn Point")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(1863, -42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-64.6799, 83.18)
+scale = Vector2(0.74, 0.74)
+physics_material_override = SubResource("PhysicsMaterial_f5apu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/StaticBody2D"]
+z_index = 1
+position = Vector2(109.027, -211.054)
+scale = Vector2(1.036, 1.344)
+polygon = PackedVector2Array(-926.211, 386, -550.019, 323, -425.486, 335, -330.789, 347, -167.341, 321, -142.694, 318, -46.6997, 318, 93.3994, 335, 186.799, 345, 276.306, 361, 400.839, 374, 481.266, 369, 822.153, 328.378, 651, 499, 242.66, 489.478, -944.372, 471)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(-35, -7)
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("14_psu2n")
+
+[node name="Spawn Point" type="Node2D" parent="Node2D"]
+position = Vector2(-617, 237)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource("16_p6ear")
+volume_db = -13.117
+
+[connection signal="timeout" from="Area 1/Cutscene Timer" to="." method="_on_cutscene_timer_timeout"]
+[connection signal="on_transition" from="Area 1/RoomTransitionTrigger" to="Area 1" method="_on_room_transition_trigger_on_transition"]

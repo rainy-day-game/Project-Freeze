@@ -1,9 +1,10 @@
 extends Node
 @onready var cutscene_timer = $"Cutscene Timer"
-@onready var command = $"Command Prompt"
-@onready var player = $Player
+@onready var command =$"../Camera2D/Command Prompt"
+@onready var player = $"../Player"
 @onready var target = $Target
 @onready var camera_anim = $AnimationPlayer
+@onready var vessel = $Sprite2D/body
 
 signal stopped_moving
 
@@ -16,10 +17,12 @@ func _ready() -> void:
 	cutscene_timer.start(6)
 	await cutscene_timer.timeout
 	command.play_appear()
-	command.visible = true
+	#command.visible = true
 	await command.loading_finished
 	command.start_typing("Hey! You there! I hope to god that worked... You there dude?")
+	vessel.play()
 	await command.typing_finished
+	vessel.stop()
 	command.visible = false
 	cutscene_timer.start(0.5)
 	await cutscene_timer.timeout
@@ -32,11 +35,13 @@ func _ready() -> void:
 	await camera_anim.animation_finished
 	command.visible = true
 	command.start_typing("I dont know what I should be saying I think Lucas could be saying what I need to say")
+	vessel.play()
 	await command.typing_finished
 	cutscene_timer.start(0.1)
 	await cutscene_timer.timeout
 	command.start_typing("Anyway I think you should go on your quest now it would be really awesome now GO my beautiful baby boy!")
 	await command.typing_finished
+	vessel.stop()
 	command.visible = false
 	camera_anim.play("camera_rev")
 	await camera_anim.animation_finished
@@ -57,3 +62,8 @@ func _physics_process(delta: float) -> void:
 			move_player = false
 			print(player.last_direction)
 			stopped_moving.emit()
+
+
+func _on_room_transition_trigger_on_transition() -> void:
+	print("hiii")
+	camera_anim.play("audio_fade_out")

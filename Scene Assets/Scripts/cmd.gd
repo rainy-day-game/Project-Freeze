@@ -3,6 +3,8 @@ extends Sprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var animation_player2 = $AnimationPlayer2
 @onready var speech_text = $Speech/RichTextLabel
+@onready var appear_sound = $Appear
+@onready var type_sound = $Type
 
 
 @onready var loading_components = $Loading
@@ -21,6 +23,7 @@ func _ready() -> void:
 
 func play_appear():
 	animation_player.play("appear")
+	appear_sound.play()
 
 func start_typing(text):
 	loading_components.visible = false
@@ -29,11 +32,14 @@ func start_typing(text):
 	speech_text.text = text
 	speech_text.visible_characters = 0
 	playing_text = true
+	type_sound.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (playing_text):
 		speech_text.visible_ratio += 1.0/speech_text.text.length()/text_speed
+		if (speech_text.visible_ratio >= 1):
+			type_sound.stop()
 		if (Input.is_action_just_pressed("continue") and speech_text.visible_ratio >= 1 and timer.is_stopped()):
 			typing_finished.emit()
 		elif Input.is_action_just_pressed("continue"):
