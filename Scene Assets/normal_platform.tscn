@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://y5a2fa05gw31"]
+
+[ext_resource type="Texture2D" uid="uid://cl201n0somq75" path="res://art assets/tiles/Ice Tile platform.png" id="1_tlv2i"]
+
+[node name="Normal Platform" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tlv2i")
