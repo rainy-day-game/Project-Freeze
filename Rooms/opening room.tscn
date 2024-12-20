@@ -108,7 +108,7 @@ texture = ExtResource("1_c2ytx")
 [node name="cloud" type="AnimatedSprite2D" parent="Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_7h05t")
 animation = &"cloud move"
-frame_progress = 0.966496
+frame_progress = 0.854893
 
 [node name="shimmer" type="AnimatedSprite2D" parent="Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_uooop")

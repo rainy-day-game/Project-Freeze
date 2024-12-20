@@ -1,16 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce5mako4rk877"]
+[gd_scene load_steps=3 format=3 uid="uid://ce5mako4rk877"]
 
-[ext_resource type="PackedScene" uid="uid://4rnqdqxoce74" path="res://Player.tscn" id="1_l3xi5"]
+[ext_resource type="Texture2D" uid="uid://1yyllfkjsoq7" path="res://art assets/rooms/ascent/ascent_0000.png" id="1_vk5en"]
+[ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="2_5ns8u"]
 
 [node name="ascent" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(471.778, -100.5)
+scale = Vector2(0.890278, 0.890278)
+texture = ExtResource("1_vk5en")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(14, -19, 122, -24, 188, -32, 255, -49, 297, -41, 408, -42, 426, -115, 525, -122, 584, -128, 584, -62, 599, -178, 653, -187, 727, -244, 907, -276, 918, 55, 650, 89, 160, 60, 9, 77)
-
-[node name="Player" parent="." instance=ExtResource("1_l3xi5")]
-position = Vector2(31, -108)
+position = Vector2(87, 148)
+polygon = PackedVector2Array(-187, 75, -190, 46, 47, 12, 107, 1, 193, -2, 243, 12, 297, 3, 340, -71, 376, -88, 419, -87, 477, -89, 517, -92, 538, -101, 557, -121, 569, -161, 659, -166, 680, -194, 691, -250, 951, -281, 953, 70, 650, 89, 160, 60, 9, 77)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(467, -100)
+
+[node name="Player" parent="." instance=ExtResource("2_5ns8u")]
+position = Vector2(-10, 73)
