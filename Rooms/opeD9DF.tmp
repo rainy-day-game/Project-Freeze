@@ -1,0 +1,105 @@
+[gd_scene load_steps=16 format=3 uid="uid://cyee4w5mm838s"]
+
+[ext_resource type="Texture2D" uid="uid://63diolmtv5vc" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
+[ext_resource type="Script" path="res://Rooms/Scripts/opening.gd" id="1_x354r"]
+[ext_resource type="Texture2D" uid="uid://dl6e8psbexrs1" path="res://art assets/rooms/opening room/Shimmer/shimmer_0000.png" id="2_t2luo"]
+[ext_resource type="Texture2D" uid="uid://bxey0wp0t4ua0" path="res://art assets/rooms/opening room/Shimmer/shimmer_0001.png" id="3_pd70u"]
+[ext_resource type="Texture2D" uid="uid://br8ky4u30nxa0" path="res://art assets/rooms/opening room/Shimmer/shimmer_0002.png" id="4_s3yqt"]
+[ext_resource type="Texture2D" uid="uid://118h6aunabkq" path="res://art assets/rooms/opening room/Shimmer/shimmer_0003.png" id="5_nhsbt"]
+[ext_resource type="Texture2D" uid="uid://cpl3kq0bdtmhp" path="res://art assets/rooms/opening room/vessel/Vessel_0000.png" id="6_ereh3"]
+[ext_resource type="Texture2D" uid="uid://ifnqq3cp10t5" path="res://art assets/rooms/opening room/vessel/Vessel_0001.png" id="7_3metk"]
+[ext_resource type="Texture2D" uid="uid://cibfbgh3i41hu" path="res://art assets/rooms/opening room/vessel/Vessel_0002.png" id="8_iuytc"]
+[ext_resource type="PackedScene" uid="uid://cbyqs7lkh7xa7" path="res://Scene Assets/text.tscn" id="9_t3ysp"]
+[ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="10_cqrww"]
+[ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="11_gn1ss"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uooop"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t2luo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pd70u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s3yqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nhsbt")
+}],
+"loop": true,
+"name": &"shimmer",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g5hsu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ereh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3metk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iuytc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d04dr"]
+size = Vector2(42, 651)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_x354r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(285, -9)
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("1_c2ytx")
+
+[node name="shimmer" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_uooop")
+animation = &"shimmer"
+autoplay = "shimmer"
+frame_progress = 0.811276
+
+[node name="body" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_g5hsu")
+frame_progress = 0.140451
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(284.8, -5.72)
+scale = Vector2(5.57259, 6.63888)
+metadata/_edit_lock_ = true
+
+[node name="Command Prompt" parent="." instance=ExtResource("9_t3ysp")]
+z_index = 10
+position = Vector2(-79, -163)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-149, 319, -118.46, 318.668, -20, 295, 143, 305, 248, 309, 418, 293, 555, 301, 636, 306, 721, 305, 806, 291, 871, 280, 867, 404, -109, 406)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-170, -8.5)
+shape = SubResource("RectangleShape2D_d04dr")
+
+[node name="Player" parent="." instance=ExtResource("10_cqrww")]
+position = Vector2(101, 228)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="TransitionScreen" parent="." instance=ExtResource("11_gn1ss")]
+
+[node name="Cutscene Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Target" type="Node2D" parent="."]
+position = Vector2(428, 264)
+
+[connection signal="timeout" from="Cutscene Timer" to="." method="_on_cutscene_timer_timeout"]

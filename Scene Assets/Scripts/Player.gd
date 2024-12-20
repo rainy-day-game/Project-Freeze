@@ -8,11 +8,15 @@ var last_direction = 1
 var started_jumping = false
 var jump_up_start = false
 var jump_down_start = false
+
+var can_control = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
+	if (!can_control): # For cutscenes
+		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -31,6 +35,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _process(delta):
+	
 	apply_movement_anim()
 	apply_jump_anim() # Jump will override movement
 	

@@ -1,5 +1,6 @@
 extends Node
 
+@onready var audio = $"../../AnimationPlayer"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,5 +23,6 @@ func _on_transition_screen_on_transition_finished():
 
 func _on_pressed() -> void:
 	TransitionScreen.fade_in_slow()
+	audio.play("fade_out_volume")
 	await TransitionScreen.on_transition_finished
-	get_tree().change_scene_to_file("res://Rooms/room_1.tscn")
+	get_tree().change_scene_to_file("res://Rooms/opening room.tscn")

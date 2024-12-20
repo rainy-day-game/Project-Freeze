@@ -17,7 +17,6 @@ func _on_animation_player_animation_finished(anim_name):
 		animation_player.play("fade_out")
 	elif (anim_name == "fade_in_slow"):
 		on_transition_finished.emit()
-		animation_player.play("fade_out_slow")
 	else:
 		color_rect.visible = false
 		
@@ -28,9 +27,14 @@ func fade_out():
 	animation_player.play("fade_out")
 	
 func fade_out_slow():
-	'''Fades from black to transparent for 1 sec'''
+	'''Fades from black to transparent for 2.5 sec'''
 	color_rect.visible = true
 	animation_player.play("fade_out_slow")
+	
+func fade_out_really_slow():
+	'''Fades from black to transparent for 5 sec'''
+	color_rect.visible = true
+	animation_player.play("fade_out_really_slow")
 	
 func fade_in():
 	'''Fades from transparent to black for 0.2 sec'''
@@ -38,7 +42,7 @@ func fade_in():
 	animation_player.play("fade_in")
 
 func fade_in_slow():
-	'''Fades from transparent to black for 1 sec'''
+	'''Fades from transparent to black for 2.5 sec'''
 	color_rect.visible = true
 	animation_player.play("fade_in_slow")
 	
