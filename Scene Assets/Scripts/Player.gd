@@ -9,7 +9,7 @@ var started_jumping = false
 var jump_up_start = false
 var jump_down_start = false
 
-var can_control = false
+var can_control = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 

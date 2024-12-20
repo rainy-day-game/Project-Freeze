@@ -11,6 +11,7 @@ var cutscene_speed = 200
 var move_player = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	player.can_control = false
 	TransitionScreen.fade_out_really_slow()
 	cutscene_timer.start(6)
 	await cutscene_timer.timeout
