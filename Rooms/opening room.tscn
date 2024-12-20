@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://cyee4w5mm838s"]
+
+[ext_resource type="Texture2D" uid="uid://dfayoam6jghvp" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
+[ext_resource type="Texture2D" uid="uid://bc3mavkebinqy" path="res://art assets/rooms/opening room/Shimmer/shimmer_0000.png" id="2_t2luo"]
+[ext_resource type="Texture2D" uid="uid://cysd1pk74lhcn" path="res://art assets/rooms/opening room/Shimmer/shimmer_0001.png" id="3_pd70u"]
+[ext_resource type="Texture2D" uid="uid://dr1sc834b8n8b" path="res://art assets/rooms/opening room/Shimmer/shimmer_0002.png" id="4_s3yqt"]
+[ext_resource type="Texture2D" uid="uid://bmei5stll5i5s" path="res://art assets/rooms/opening room/Shimmer/shimmer_0003.png" id="5_nhsbt"]
+[ext_resource type="Texture2D" uid="uid://dlmpwnaw0gnat" path="res://art assets/rooms/opening room/vessel/Vessel_0000.png" id="6_ereh3"]
+[ext_resource type="Texture2D" uid="uid://dwqnvbdxh6g7i" path="res://art assets/rooms/opening room/vessel/Vessel_0001.png" id="7_3metk"]
+[ext_resource type="Texture2D" uid="uid://b41x0x8q5tjok" path="res://art assets/rooms/opening room/vessel/Vessel_0002.png" id="8_iuytc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uooop"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t2luo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pd70u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s3yqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nhsbt")
+}],
+"loop": true,
+"name": &"shimmer",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g5hsu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ereh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3metk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iuytc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(285, -9)
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("1_c2ytx")
+
+[node name="cloud" type="AnimatedSprite2D" parent="Sprite2D"]
+
+[node name="shimmer" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_uooop")
+animation = &"shimmer"
+frame_progress = 0.22734
+
+[node name="body" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_g5hsu")
+frame_progress = 0.882706
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(284.8, -5.72)
+scale = Vector2(5.57259, 6.63888)
+metadata/_edit_lock_ = true

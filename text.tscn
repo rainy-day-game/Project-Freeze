@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://boc7cuih16h1h"]
+
+[ext_resource type="Texture2D" uid="uid://bfmknpcukc7qs" path="res://art assets/Command prompt images/command prompt_0000.png" id="1_3mild"]
+
+[node name="text" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3mild")
