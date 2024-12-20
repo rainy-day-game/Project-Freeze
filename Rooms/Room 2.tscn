@@ -14,7 +14,7 @@ physics_material_override = SubResource("PhysicsMaterial_5vcfa")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-120, -63)
 scale = Vector2(0.770883, 1)
-polygon = PackedVector2Array(-861.349, 352, -616.176, 307, -481.266, 305, -364.517, 325, -255.551, 299, -141.396, 282, -60.969, 314, 83.0217, 325, 208.851, 317, 320.412, 349, 482.563, 368, 596.718, 329, 714.764, 304, 651, 499, 242.66, 489.478, -807, 465)
+polygon = PackedVector2Array(-926.211, 386, -550.019, 323, -425.486, 335, -330.789, 347, -167.341, 321, -142.694, 318, -46.6997, 318, 93.3994, 335, 186.799, 345, 276.306, 361, 400.839, 374, 481.266, 369, 822.433, 323, 651, 499, 242.66, 489.478, -944.372, 471)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 327)
@@ -26,18 +26,3 @@ texture = ExtResource("1_glh81")
 
 [node name="Player" parent="." instance=ExtResource("2_7wv68")]
 position = Vector2(-3, 554)
-
-[node name="Snow" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-position = Vector2(582, 360)
-scale = Vector2(0.898438, 1.00833)
-frame_progress = 0.172008
-script = null
