@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://drx7ymy4kb7kn"]
+
+[ext_resource type="Texture2D" uid="uid://5k7lb3dixrx4" path="res://art assets/Power/Power spike warning/indicator_0001.png" id="1_ki5ap"]
+[ext_resource type="Texture2D" uid="uid://dqwi1puk2ev1d" path="res://art assets/Power/Power spike warning/indicator_0000.png" id="2_ad6o1"]
+[ext_resource type="Texture2D" uid="uid://c8e2it4ib56wr" path="res://art assets/Power/Power spike warning/indicator_0002.png" id="3_rxq1j"]
+[ext_resource type="Texture2D" uid="uid://dn8dxcu2schgd" path="res://art assets/Power/Power spike warning/indicator_0003.png" id="4_jpikk"]
+[ext_resource type="Texture2D" uid="uid://chsxgh2006ccj" path="res://art assets/Spikes/spike_0000.png" id="5_e1trr"]
+[ext_resource type="Texture2D" uid="uid://sll57u13l4vk" path="res://art assets/Spikes/spike_0001.png" id="6_esn2k"]
+[ext_resource type="Texture2D" uid="uid://chhy74f5bs7ne" path="res://art assets/Spikes/spike_0002.png" id="7_h5qlp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b3vdg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ki5ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ad6o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rxq1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jpikk")
+}],
+"loop": true,
+"name": &"indicator",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_e1trr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_esn2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h5qlp")
+}],
+"loop": true,
+"name": &"spike",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vcplt"]
+radius = 16.0
+height = 282.0
+
+[node name="Spike" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_b3vdg")
+animation = &"spike"
+frame_progress = 0.107212
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6, 1)
+shape = SubResource("CapsuleShape2D_vcplt")
