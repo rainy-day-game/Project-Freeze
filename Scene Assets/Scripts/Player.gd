@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var squat_timer = $"Squat Timer"
-const SPEED = 200.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 230.0
+const JUMP_VELOCITY = -600.0
 var last_direction = 1
 var started_jumping = false
 var jump_up_start = false

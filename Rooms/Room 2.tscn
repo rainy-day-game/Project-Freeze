@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dijyxs662ai8l"]
+[gd_scene load_steps=4 format=3 uid="uid://d0b4440d7fuqn"]
 
 [ext_resource type="Texture2D" uid="uid://cg01sswd5k6gs" path="res://art assets/rooms/mountain pass/Mountain Pass_0000.png" id="1_glh81"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="2_7wv68"]
-[ext_resource type="PackedScene" uid="uid://cfs2g24c1oh5t" path="res://Snow.tscn" id="3_y565d"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5vcfa"]
 
@@ -28,7 +27,17 @@ texture = ExtResource("1_glh81")
 [node name="Player" parent="." instance=ExtResource("2_7wv68")]
 position = Vector2(-3, 554)
 
-[node name="Snow" parent="." instance=ExtResource("3_y565d")]
+[node name="Snow" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(582, 360)
 scale = Vector2(0.898438, 1.00833)
 frame_progress = 0.172008
+script = null
