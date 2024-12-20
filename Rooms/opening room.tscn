@@ -1,13 +1,65 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyee4w5mm838s"]
+[gd_scene load_steps=23 format=3 uid="uid://cyee4w5mm838s"]
 
 [ext_resource type="Texture2D" uid="uid://dfayoam6jghvp" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
+[ext_resource type="Texture2D" uid="uid://c3p4emngcv1n1" path="res://art assets/rooms/opening room/cloud/cloud paralax_0000.png" id="2_rravp"]
 [ext_resource type="Texture2D" uid="uid://bc3mavkebinqy" path="res://art assets/rooms/opening room/Shimmer/shimmer_0000.png" id="2_t2luo"]
 [ext_resource type="Texture2D" uid="uid://cysd1pk74lhcn" path="res://art assets/rooms/opening room/Shimmer/shimmer_0001.png" id="3_pd70u"]
+[ext_resource type="Texture2D" uid="uid://cou8hhcy8khh1" path="res://art assets/rooms/opening room/cloud/cloud paralax_0001.png" id="3_pigpw"]
 [ext_resource type="Texture2D" uid="uid://dr1sc834b8n8b" path="res://art assets/rooms/opening room/Shimmer/shimmer_0002.png" id="4_s3yqt"]
+[ext_resource type="Texture2D" uid="uid://i0af0h3quyi4" path="res://art assets/rooms/opening room/cloud/cloud paralax_0002.png" id="4_vfhb0"]
+[ext_resource type="Texture2D" uid="uid://d3pr8hjn7oj61" path="res://art assets/rooms/opening room/cloud/cloud paralax_0003.png" id="5_hs7t6"]
 [ext_resource type="Texture2D" uid="uid://bmei5stll5i5s" path="res://art assets/rooms/opening room/Shimmer/shimmer_0003.png" id="5_nhsbt"]
+[ext_resource type="Texture2D" uid="uid://drqtut83pc8un" path="res://art assets/rooms/opening room/cloud/cloud paralax_0004.png" id="6_0p0q7"]
 [ext_resource type="Texture2D" uid="uid://dlmpwnaw0gnat" path="res://art assets/rooms/opening room/vessel/Vessel_0000.png" id="6_ereh3"]
 [ext_resource type="Texture2D" uid="uid://dwqnvbdxh6g7i" path="res://art assets/rooms/opening room/vessel/Vessel_0001.png" id="7_3metk"]
+[ext_resource type="Texture2D" uid="uid://crbhbd0ijvh0x" path="res://art assets/rooms/opening room/cloud/cloud paralax_0005.png" id="7_agouw"]
 [ext_resource type="Texture2D" uid="uid://b41x0x8q5tjok" path="res://art assets/rooms/opening room/vessel/Vessel_0002.png" id="8_iuytc"]
+[ext_resource type="Texture2D" uid="uid://diym0dfuvnunr" path="res://art assets/rooms/opening room/cloud/cloud paralax_0006.png" id="8_vpetr"]
+[ext_resource type="Texture2D" uid="uid://bplsa0h24ayhi" path="res://art assets/rooms/opening room/cloud/cloud paralax_0007.png" id="9_flq1y"]
+[ext_resource type="Texture2D" uid="uid://duos0e1w8wk0r" path="res://art assets/rooms/opening room/cloud/cloud paralax_0008.png" id="10_aqs2u"]
+[ext_resource type="Texture2D" uid="uid://cxfcwarx8g3st" path="res://art assets/rooms/opening room/cloud/cloud paralax_0009.png" id="11_bbxwd"]
+[ext_resource type="Texture2D" uid="uid://5bxprnobj47i" path="res://art assets/rooms/opening room/cloud/cloud paralax_0010.png" id="12_f7c8h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7h05t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rravp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pigpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vfhb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hs7t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0p0q7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_agouw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vpetr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_flq1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_aqs2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bbxwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f7c8h")
+}],
+"loop": true,
+"name": &"cloud move",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uooop"]
 animations = [{
@@ -54,6 +106,9 @@ scale = Vector2(0.76, 0.76)
 texture = ExtResource("1_c2ytx")
 
 [node name="cloud" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_7h05t")
+animation = &"cloud move"
+frame_progress = 0.966496
 
 [node name="shimmer" type="AnimatedSprite2D" parent="Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_uooop")
