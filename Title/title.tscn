@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="4_cmds2"]
 [ext_resource type="Script" path="res://Title/title.gd" id="4_dhy35"]
 [ext_resource type="PackedScene" uid="uid://dpv01x6bshd0m" path="res://Scene Assets/Snow_Test.tscn" id="6_aouyx"]
-[ext_resource type="AudioStream" uid="uid://c0tebii7ex8db" path="res://Title/Angels of Static (1).wav" id="7_kqdx3"]
+[ext_resource type="AudioStream" uid="uid://bg8ps54ovmdgj" path="res://Title/Angels of Static (1).wav" id="7_kqdx3"]
 
 [sub_resource type="Animation" id="Animation_pb8k0"]
 length = 0.001
