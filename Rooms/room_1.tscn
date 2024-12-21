@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dy87mx71j0ikl"]
+[gd_scene load_steps=9 format=3 uid="uid://dy87mx71j0ikl"]
 
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="1_e44gc"]
 [ext_resource type="PackedScene" uid="uid://dpv01x6bshd0m" path="res://Scene Assets/Snow_Test.tscn" id="5_njmxw"]
 [ext_resource type="PackedScene" uid="uid://cbyqs7lkh7xa7" path="res://Scene Assets/text.tscn" id="6_rwrhf"]
 [ext_resource type="PackedScene" uid="uid://drx7ymy4kb7kn" path="res://Scene Assets/spike.tscn" id="7_gyicn"]
+[ext_resource type="PackedScene" uid="uid://c3mjam6wfh5vo" path="res://Scene Assets/non_power_spike.tscn" id="8_w6ydt"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="9_w8ymp"]
 [ext_resource type="Texture2D" uid="uid://f4nrhlb1lk1w" path="res://art assets/rooms/test area/Back Ground_0000.png" id="10_d7gps"]
 [ext_resource type="PackedScene" uid="uid://1ajjnb7ts3if" path="res://Scene Assets/room_transition_trigger.tscn" id="11_i5cay"]
@@ -76,3 +77,6 @@ position = Vector2(1318, -228)
 
 [node name="Spike" parent="." instance=ExtResource("7_gyicn")]
 position = Vector2(1935, 505)
+
+[node name="non power spike" parent="." instance=ExtResource("8_w6ydt")]
+position = Vector2(1827, 528)

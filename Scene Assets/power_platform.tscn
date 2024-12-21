@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://d4gj4i646lbas"]
 
-[ext_resource type="Texture2D" uid="uid://cqcl5e5nrtkys" path="res://art assets/Power/power platform warning/platform indicator_0000.png" id="1_yrdn0"]
-[ext_resource type="Texture2D" uid="uid://dielmdtmffusi" path="res://art assets/Power/power platform warning/platform indicator_0001.png" id="2_2wrfn"]
-[ext_resource type="Texture2D" uid="uid://7d54kmy0o4yv" path="res://art assets/Power/power platform warning/platform indicator_0002.png" id="3_puyvc"]
-[ext_resource type="Texture2D" uid="uid://iw8gcvh6u4q8" path="res://art assets/Power/power platform warning/platform indicator_0003.png" id="4_qgq28"]
-[ext_resource type="Texture2D" uid="uid://c6rh2kfu3nsnj" path="res://art assets/power platform/platform_0000.png" id="5_1gtdc"]
-[ext_resource type="Texture2D" uid="uid://c06rlwnsqhd1k" path="res://art assets/power platform/platform_0001.png" id="6_wxcjs"]
-[ext_resource type="Texture2D" uid="uid://b2p5m63mr148r" path="res://art assets/power platform/platform_0002.png" id="7_4pmus"]
+[ext_resource type="Texture2D" uid="uid://cp04pgq6vykuh" path="res://art assets/Power/power platform warning/platform indicator_0000.png" id="1_yrdn0"]
+[ext_resource type="Texture2D" uid="uid://b50ifs8crbms7" path="res://art assets/Power/power platform warning/platform indicator_0001.png" id="2_2wrfn"]
+[ext_resource type="Texture2D" uid="uid://bblaqgy3mtdi8" path="res://art assets/Power/power platform warning/platform indicator_0002.png" id="3_puyvc"]
+[ext_resource type="Texture2D" uid="uid://can33rjj4kknm" path="res://art assets/Power/power platform warning/platform indicator_0003.png" id="4_qgq28"]
+[ext_resource type="Texture2D" uid="uid://l7lxt65d5p87" path="res://art assets/power platform/platform_0000.png" id="5_1gtdc"]
+[ext_resource type="Texture2D" uid="uid://dt0rllbjfe2br" path="res://art assets/power platform/platform_0001.png" id="6_wxcjs"]
+[ext_resource type="Texture2D" uid="uid://d0y86pokabt5t" path="res://art assets/power platform/platform_0002.png" id="7_4pmus"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qw51m"]
 animations = [{
@@ -48,3 +48,9 @@ animations = [{
 sprite_frames = SubResource("SpriteFrames_qw51m")
 animation = &"platform"
 frame_progress = 0.402772
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatedSprite2D/StaticBody2D"]
+position = Vector2(-8, 37)
+polygon = PackedVector2Array(-104, -88, -105, 10, -77, 18, -28, 21, 22, 35, 99, 19, 126, 4, 145, -3, 165, -36, 148, -95, 87, -97, 32, -96, -15, -97, -86, -93)
