@@ -17,7 +17,7 @@ func _process(delta):
 		for body in $Area2D.get_overlapping_bodies():
 			if(body.name == "Player"):   # Check to see that overlap is Player layer
 				player.position = Global.last_spawnpoint.global_position
-	elif! Global.spikebutt:
+	elif! Global.spikebutt: #this works smile
 		self.visible = false
 
 
