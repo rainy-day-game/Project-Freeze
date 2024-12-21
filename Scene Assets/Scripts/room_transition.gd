@@ -23,4 +23,5 @@ func _on_body_entered(body):
 		print(camera.position)
 		player.position.x = spawn_point.global_position.x
 		on_transition.emit()
+		Global.last_spawnpoint = spawn_point
 		#print(camera.get_child(0).preprocess)

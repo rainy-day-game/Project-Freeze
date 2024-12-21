@@ -38,7 +38,7 @@ func _process(delta):
 	
 	apply_movement_anim()
 	apply_jump_anim() # Jump will override movement
-	
+	spikebutton()
 func apply_movement_anim():
 	'''Takes direction moving, and appplies the movement and animation'''
 	
@@ -80,3 +80,13 @@ func apply_jump_anim():
 	else:
 		started_jumping = false # Jump has completed
 	
+
+func spikebutton():
+	if Input.is_action_just_pressed("spike button"):
+		if Global.spikebutt:
+			Global.spikebutt = false
+		else:
+			Global.spikebutt = true
+	else:
+		pass
+		
