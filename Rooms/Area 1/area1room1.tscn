@@ -36,14 +36,14 @@ sprite_frames = SubResource("SpriteFrames_5fi25")
 autoplay = "default"
 frame_progress = 0.215352
 
-[node name="foundation platform" type="Sprite2D" parent="."]
+[node name="foundation platform2" type="Sprite2D" parent="."]
 position = Vector2(3, 34)
 scale = Vector2(2.19752, 1.01514)
 texture = ExtResource("4_mhxsl")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="foundation platform"]
+[node name="StaticBody2D" type="StaticBody2D" parent="foundation platform2"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="foundation platform/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="foundation platform2/StaticBody2D"]
 position = Vector2(-13, 567)
 polygon = PackedVector2Array(-350, -13, -272, -33, -165, -21, -73, -10, -36, -23, 51, -4, 110, -2, 169, 10, 242, -16, 293, -12, 344, -20, 421, -20, 362, 104, 35, 121, -174, 99, -298, 110, -366, 100, -373, 30)
 
@@ -63,6 +63,10 @@ scale = Vector2(0.836259, 0.533935)
 position = Vector2(0, 0)
 scale = Vector2(1, 1)
 
+[node name="Normal Platform6" parent="platform" instance=ExtResource("5_mn2wf")]
+position = Vector2(524.957, 20.6017)
+scale = Vector2(1, 1)
+
 [node name="Normal Platform2" parent="platform" instance=ExtResource("5_mn2wf")]
 position = Vector2(301.342, -228.492)
 rotation = -0.01105
@@ -74,24 +78,16 @@ rotation = -0.00988001
 scale = Vector2(1, 1)
 
 [node name="Normal Platform4" parent="platform" instance=ExtResource("5_mn2wf")]
-position = Vector2(402.985, -1488.94)
-rotation = -0.661939
-scale = Vector2(1, 1)
-
-[node name="Normal Platform5" parent="platform" instance=ExtResource("5_mn2wf")]
-position = Vector2(357.545, -670.493)
-scale = Vector2(1, 1)
-
-[node name="Normal Platform7" parent="platform" instance=ExtResource("5_mn2wf")]
-position = Vector2(706.719, -764.137)
-scale = Vector2(1, 1)
+position = Vector2(768.901, -1243.6)
+rotation = -0.46379
+scale = Vector2(4.21713, 1.04802)
 
 [node name="Normal Platform8" parent="platform" instance=ExtResource("5_mn2wf")]
-position = Vector2(304.93, -1084.4)
+position = Vector2(-365.915, -696.714)
 rotation = 0.554296
 scale = Vector2(1, 1)
 
 [node name="Normal Platform9" parent="platform" instance=ExtResource("5_mn2wf")]
-position = Vector2(4.7832, -1282.93)
-rotation = 1.56053
-scale = Vector2(1, 1)
+position = Vector2(3.58736, -1112.49)
+rotation = -0.933143
+scale = Vector2(1.57567, 1)

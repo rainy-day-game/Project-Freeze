@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3mjam6wfh5vo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b6l6p"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"indicator",
+"speed": 5.0
+}]
+
+[node name="non power spike" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_b6l6p")
+animation = &"indicator"

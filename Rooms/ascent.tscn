@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ce5mako4rk877"]
 
-[ext_resource type="Texture2D" uid="uid://cc4mrdajxm71x" path="res://art assets/rooms/ascent/ascent_0000.png" id="1_vk5en"]
+[ext_resource type="Texture2D" uid="uid://1yyllfkjsoq7" path="res://art assets/rooms/ascent/ascent_0000.png" id="1_vk5en"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="2_5ns8u"]
 
 [node name="ascent" type="Node2D"]

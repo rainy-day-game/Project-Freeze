@@ -1,25 +1,21 @@
 [gd_scene load_steps=26 format=3 uid="uid://cyee4w5mm838s"]
 
-[ext_resource type="Texture2D" uid="uid://cora24aeihdwj" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
+[ext_resource type="Texture2D" uid="uid://dfayoam6jghvp" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
 [ext_resource type="Script" path="res://Rooms/Scripts/opening.gd" id="1_x354r"]
-[ext_resource type="Texture2D" uid="uid://cb3yr1vggqexp" path="res://art assets/rooms/opening room/Shimmer/shimmer_0000.png" id="2_t2luo"]
-[ext_resource type="Texture2D" uid="uid://df2flwrbca0oi" path="res://art assets/rooms/opening room/Shimmer/shimmer_0001.png" id="3_pd70u"]
-[ext_resource type="Texture2D" uid="uid://c16l6sib16r5t" path="res://art assets/rooms/opening room/Shimmer/shimmer_0002.png" id="4_s3yqt"]
-[ext_resource type="Texture2D" uid="uid://wy3a574i3w18" path="res://art assets/rooms/opening room/Shimmer/shimmer_0003.png" id="5_nhsbt"]
-[ext_resource type="Texture2D" uid="uid://djpio0n8jh8m4" path="res://art assets/rooms/opening room/vessel/Vessel_0000.png" id="6_ereh3"]
-[ext_resource type="Texture2D" uid="uid://d0ugfl0dfv1np" path="res://art assets/rooms/opening room/vessel/Vessel_0001.png" id="7_3metk"]
-[ext_resource type="Texture2D" uid="uid://xnkqlfwe1gb7" path="res://art assets/rooms/opening room/vessel/Vessel_0002.png" id="8_iuytc"]
+[ext_resource type="Texture2D" uid="uid://bc3mavkebinqy" path="res://art assets/rooms/opening room/Shimmer/shimmer_0000.png" id="2_t2luo"]
+[ext_resource type="Texture2D" uid="uid://cysd1pk74lhcn" path="res://art assets/rooms/opening room/Shimmer/shimmer_0001.png" id="3_pd70u"]
+[ext_resource type="Texture2D" uid="uid://dr1sc834b8n8b" path="res://art assets/rooms/opening room/Shimmer/shimmer_0002.png" id="4_s3yqt"]
+[ext_resource type="Texture2D" uid="uid://bmei5stll5i5s" path="res://art assets/rooms/opening room/Shimmer/shimmer_0003.png" id="5_nhsbt"]
+[ext_resource type="Texture2D" uid="uid://dlmpwnaw0gnat" path="res://art assets/rooms/opening room/vessel/Vessel_0000.png" id="6_ereh3"]
+[ext_resource type="Texture2D" uid="uid://dwqnvbdxh6g7i" path="res://art assets/rooms/opening room/vessel/Vessel_0001.png" id="7_3metk"]
+[ext_resource type="Texture2D" uid="uid://b41x0x8q5tjok" path="res://art assets/rooms/opening room/vessel/Vessel_0002.png" id="8_iuytc"]
 [ext_resource type="PackedScene" uid="uid://cbyqs7lkh7xa7" path="res://Scene Assets/text.tscn" id="9_t3ysp"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="10_cqrww"]
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="11_gn1ss"]
-[ext_resource type="AudioStream" uid="uid://m8yd53dh0wyx" path="res://art assets/rooms/~ assets/151705__gnrja__ocean-waves-3.wav" id="13_p3jxu"]
+[ext_resource type="AudioStream" uid="uid://1j152g0uydp3" path="res://art assets/rooms/~ assets/151705__gnrja__ocean-waves-3.wav" id="13_p3jxu"]
 [ext_resource type="Texture2D" uid="uid://cg01sswd5k6gs" path="res://art assets/rooms/mountain pass/Mountain Pass_0000.png" id="14_psu2n"]
 [ext_resource type="PackedScene" uid="uid://1ajjnb7ts3if" path="res://Scene Assets/room_transition_trigger.tscn" id="15_mhrnq"]
-[ext_resource type="AudioStream" uid="uid://8vw57a7ybxim" path="res://art assets/rooms/~ assets/555062__magnuswaker__cold-wind-loop.wav" id="16_p6ear"]
-[ext_resource type="PackedScene" uid="uid://dpv01x6bshd0m" path="res://Scene Assets/Snow_Test.tscn" id="17_nx2yi"]
-[ext_resource type="Script" path="res://Scene Assets/Scripts/cmd_appear.gd" id="18_onvwt"]
-[ext_resource type="PackedScene" uid="uid://bm07c85i13exa" path="res://Scene Assets/transition_trigger.tscn" id="20_4suc7"]
-[ext_resource type="Texture2D" uid="uid://cc4mrdajxm71x" path="res://art assets/rooms/ascent/ascent_0000.png" id="29_cf1v5"]
+[ext_resource type="AudioStream" uid="uid://cvgvqcve1cgml" path="res://art assets/rooms/~ assets/555062__magnuswaker__cold-wind-loop.wav" id="16_p6ear"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uooop"]
 animations = [{
@@ -165,7 +161,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area 2/AudioStreamPlayer2D:volume_db")
+tracks/1/path = NodePath("Node2D/AudioStreamPlayer2D:volume_db")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -177,7 +173,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area 2/AudioStreamPlayer2D:playing")
+tracks/2/path = NodePath("Node2D/AudioStreamPlayer2D:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -393,61 +389,5 @@ position = Vector2(-617, 237)
 stream = ExtResource("16_p6ear")
 volume_db = -13.117
 
-[node name="SnowTest" parent="Area 2" instance=ExtResource("17_nx2yi")]
-position = Vector2(1816, -453)
-emission_rect_extents = Vector2(600, 1)
-
-[node name="RoomTransitionTrigger" parent="Area 2" node_paths=PackedStringArray("next_room", "spawn_point") instance=ExtResource("15_mhrnq")]
-position = Vector2(588, 239)
-scale = Vector2(1, 11.79)
-next_room = NodePath("../../Area 3/Sprite2D")
-spawn_point = NodePath("../../Area 3/SpawnPoint")
-
-[node name="Area 3" type="Node2D" parent="."]
-position = Vector2(3726, 50)
-scale = Vector2(0.955, 0.955)
-script = ExtResource("18_onvwt")
-speed = 1
-text = "I have installed a jump module into your motherboard. Try it out by pressing [C] on your keyboard"
-
-[node name="Sprite2D" type="Sprite2D" parent="Area 3"]
-position = Vector2(-505.03, -89.7079)
-scale = Vector2(0.955, 0.955)
-texture = ExtResource("29_cf1v5")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Area 3"]
-position = Vector2(-976.808, 10.7921)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area 3/StaticBody2D"]
-position = Vector2(82, 188)
-polygon = PackedVector2Array(-326.134, 99.6372, -312.521, 16.9147, 47, 12, 107, 1, 200, 10, 264, 9, 289, 7, 329, -64, 367, -96, 419, -95, 476, -96, 523, -98, 551, -103, 557, -115, 586, -189, 675, -198, 685, -207, 735, -290, 1107.37, -312.928, 1102.14, 75.5534, 650, 89, 160, 60, 9, 77)
-
-[node name="SnowTest" parent="Area 3" instance=ExtResource("17_nx2yi")]
-position = Vector2(3242, -481)
-emission_rect_extents = Vector2(600, 1)
-
-[node name="SpawnPoint" type="Node2D" parent="Area 3"]
-position = Vector2(-1121.47, 168.586)
-
-[node name="command start" type="Area2D" parent="Area 3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area 3/command start"]
-position = Vector2(-1122.51, 169.634)
-shape = SubResource("RectangleShape2D_txgbo")
-
-[node name="command end" type="Area2D" parent="Area 3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area 3/command end"]
-position = Vector2(94.2408, -169.634)
-shape = SubResource("RectangleShape2D_2row2")
-
-[node name="TransitionTrigger" parent="." instance=ExtResource("20_4suc7")]
-position = Vector2(3843, -108)
-scale = Vector2(1, 7.03)
-scene_name = "room_1"
-
 [connection signal="timeout" from="Area 1/Cutscene Timer" to="." method="_on_cutscene_timer_timeout"]
 [connection signal="on_transition" from="Area 1/RoomTransitionTrigger" to="Area 1" method="_on_room_transition_trigger_on_transition"]
-[connection signal="body_entered" from="Area 3/command start" to="Area 3" method="_on_command_start_body_entered"]
-[connection signal="body_entered" from="Area 3/command start" to="Area 3" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area 3/command end" to="Area 3" method="_on_command_end_body_entered"]

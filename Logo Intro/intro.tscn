@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c104k6n7d56k0"]
 
-[ext_resource type="VideoStream" uid="uid://nykenbxuokv4" path="res://Logo Intro/ITS-PEAK (1).ogv" id="1_iooup"]
+[ext_resource type="VideoStream" path="res://Logo Intro/ITS-PEAK (1).ogv" id="1_iooup"]
 [ext_resource type="Texture2D" uid="uid://blhuahm0dpivs" path="res://Logo Intro/new_gradient_texture_1d.tres" id="2_idc00"]
 [ext_resource type="AudioStream" uid="uid://dh06imqefay5r" path="res://Logo Intro/ITS PEAK_1.wav" id="3_8jot3"]
-[ext_resource type="Script" uid="uid://bv2kd3i7j13o8" path="res://Logo Intro/intro.gd" id="3_jb11k"]
+[ext_resource type="Script" path="res://Logo Intro/intro.gd" id="3_jb11k"]
 
 [node name="Intro" type="Node2D"]
 
@@ -22,7 +22,7 @@ script = ExtResource("3_jb11k")
 
 [node name="audio" type="AudioStreamPlayer" parent="Camera2D"]
 stream = ExtResource("3_8jot3")
-volume_db = -14.713
+volume_db = -2.811
 
 [node name="background" type="Sprite2D" parent="."]
 z_index = -5
