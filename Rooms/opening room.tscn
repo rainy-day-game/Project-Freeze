@@ -1,25 +1,25 @@
-[gd_scene load_steps=26 format=3 uid="uid://cyee4w5mm838s"]
+[gd_scene load_steps=33 format=3 uid="uid://cyee4w5mm838s"]
 
-[ext_resource type="Texture2D" uid="uid://cora24aeihdwj" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
+[ext_resource type="Texture2D" uid="uid://63diolmtv5vc" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
 [ext_resource type="Script" path="res://Rooms/Scripts/opening.gd" id="1_x354r"]
-[ext_resource type="Texture2D" uid="uid://cb3yr1vggqexp" path="res://art assets/rooms/opening room/Shimmer/shimmer_0000.png" id="2_t2luo"]
-[ext_resource type="Texture2D" uid="uid://df2flwrbca0oi" path="res://art assets/rooms/opening room/Shimmer/shimmer_0001.png" id="3_pd70u"]
-[ext_resource type="Texture2D" uid="uid://c16l6sib16r5t" path="res://art assets/rooms/opening room/Shimmer/shimmer_0002.png" id="4_s3yqt"]
-[ext_resource type="Texture2D" uid="uid://wy3a574i3w18" path="res://art assets/rooms/opening room/Shimmer/shimmer_0003.png" id="5_nhsbt"]
-[ext_resource type="Texture2D" uid="uid://djpio0n8jh8m4" path="res://art assets/rooms/opening room/vessel/Vessel_0000.png" id="6_ereh3"]
-[ext_resource type="Texture2D" uid="uid://d0ugfl0dfv1np" path="res://art assets/rooms/opening room/vessel/Vessel_0001.png" id="7_3metk"]
-[ext_resource type="Texture2D" uid="uid://xnkqlfwe1gb7" path="res://art assets/rooms/opening room/vessel/Vessel_0002.png" id="8_iuytc"]
+[ext_resource type="Texture2D" uid="uid://dl6e8psbexrs1" path="res://art assets/rooms/opening room/Shimmer/shimmer_0000.png" id="2_t2luo"]
+[ext_resource type="Texture2D" uid="uid://bxey0wp0t4ua0" path="res://art assets/rooms/opening room/Shimmer/shimmer_0001.png" id="3_pd70u"]
+[ext_resource type="Texture2D" uid="uid://br8ky4u30nxa0" path="res://art assets/rooms/opening room/Shimmer/shimmer_0002.png" id="4_s3yqt"]
+[ext_resource type="Texture2D" uid="uid://118h6aunabkq" path="res://art assets/rooms/opening room/Shimmer/shimmer_0003.png" id="5_nhsbt"]
+[ext_resource type="Texture2D" uid="uid://cpl3kq0bdtmhp" path="res://art assets/rooms/opening room/vessel/Vessel_0000.png" id="6_ereh3"]
+[ext_resource type="Texture2D" uid="uid://ifnqq3cp10t5" path="res://art assets/rooms/opening room/vessel/Vessel_0001.png" id="7_3metk"]
+[ext_resource type="Texture2D" uid="uid://cibfbgh3i41hu" path="res://art assets/rooms/opening room/vessel/Vessel_0002.png" id="8_iuytc"]
 [ext_resource type="PackedScene" uid="uid://cbyqs7lkh7xa7" path="res://Scene Assets/text.tscn" id="9_t3ysp"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="10_cqrww"]
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="11_gn1ss"]
-[ext_resource type="AudioStream" uid="uid://m8yd53dh0wyx" path="res://art assets/rooms/~ assets/151705__gnrja__ocean-waves-3.wav" id="13_p3jxu"]
+[ext_resource type="AudioStream" uid="uid://cu71d8u3x7vph" path="res://art assets/rooms/~ assets/151705__gnrja__ocean-waves-3.wav" id="13_p3jxu"]
 [ext_resource type="Texture2D" uid="uid://cg01sswd5k6gs" path="res://art assets/rooms/mountain pass/Mountain Pass_0000.png" id="14_psu2n"]
 [ext_resource type="PackedScene" uid="uid://1ajjnb7ts3if" path="res://Scene Assets/room_transition_trigger.tscn" id="15_mhrnq"]
-[ext_resource type="AudioStream" uid="uid://8vw57a7ybxim" path="res://art assets/rooms/~ assets/555062__magnuswaker__cold-wind-loop.wav" id="16_p6ear"]
+[ext_resource type="AudioStream" uid="uid://c63com5t7q3yx" path="res://art assets/rooms/~ assets/555062__magnuswaker__cold-wind-loop.wav" id="16_p6ear"]
 [ext_resource type="PackedScene" uid="uid://dpv01x6bshd0m" path="res://Scene Assets/Snow_Test.tscn" id="17_nx2yi"]
 [ext_resource type="Script" path="res://Scene Assets/Scripts/cmd_appear.gd" id="18_onvwt"]
 [ext_resource type="PackedScene" uid="uid://bm07c85i13exa" path="res://Scene Assets/transition_trigger.tscn" id="20_4suc7"]
-[ext_resource type="Texture2D" uid="uid://cc4mrdajxm71x" path="res://art assets/rooms/ascent/ascent_0000.png" id="29_cf1v5"]
+[ext_resource type="Texture2D" uid="uid://dd6n6jeksuml3" path="res://art assets/rooms/ascent/ascent_0000.png" id="29_cf1v5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uooop"]
 animations = [{
@@ -126,7 +126,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Node2D/AudioStreamPlayer2D:volume_db")
+tracks/5/path = NodePath("Area 2/AudioStreamPlayer2D:volume_db")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -138,7 +138,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Node2D/AudioStreamPlayer2D:playing")
+tracks/6/path = NodePath("Area 2/AudioStreamPlayer2D:playing")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -301,6 +301,15 @@ _data = {
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f5apu"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ugti"]
+size = Vector2(49.9999, 1065.01)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txgbo"]
+size = Vector2(20, 90.6283)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2row2"]
+size = Vector2(20, 130.419)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("10_cqrww")]
@@ -364,32 +373,41 @@ max_distance = 1e+08
 
 [node name="RoomTransitionTrigger" parent="Area 1" node_paths=PackedStringArray("next_room", "spawn_point") instance=ExtResource("15_mhrnq")]
 position = Vector2(944, 188)
-next_room = NodePath("../../Node2D/Sprite2D")
-spawn_point = NodePath("../../Node2D/Spawn Point")
+scale = Vector2(1, 12.95)
+next_room = NodePath("../../Area 2/Sprite2D")
+spawn_point = NodePath("../../Area 2/Spawn Point")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Area 2" type="Node2D" parent="."]
 position = Vector2(1863, -42)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Area 2"]
 position = Vector2(-64.6799, 83.18)
 scale = Vector2(0.74, 0.74)
 physics_material_override = SubResource("PhysicsMaterial_f5apu")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area 2/StaticBody2D"]
 z_index = 1
 position = Vector2(109.027, -211.054)
 scale = Vector2(1.036, 1.344)
-polygon = PackedVector2Array(-926.211, 386, -550.019, 323, -425.486, 335, -330.789, 347, -167.341, 321, -142.694, 318, -46.6997, 318, 93.3994, 335, 186.799, 345, 276.306, 361, 400.839, 374, 481.266, 369, 822.153, 328.378, 651, 499, 242.66, 489.478, -944.372, 471)
+polygon = PackedVector2Array(-926.211, 386, -550.019, 323, -425.486, 335, -330.789, 347, -167.341, 321, -142.694, 318, -46.6997, 318, 93.3994, 335, 186.799, 345, 276.306, 361, 400.839, 374, 481.266, 369, 783.94, 378.057, 651, 499, 242.66, 489.478, -944.372, 471)
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area 2/StaticBody2D"]
+position = Vector2(-801.108, -106.926)
+shape = SubResource("RectangleShape2D_5ugti")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area 2/StaticBody2D"]
+position = Vector2(1083.35, -115.108)
+shape = SubResource("RectangleShape2D_5ugti")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area 2"]
 position = Vector2(-35, -7)
 scale = Vector2(0.76, 0.76)
 texture = ExtResource("14_psu2n")
 
-[node name="Spawn Point" type="Node2D" parent="Node2D"]
+[node name="Spawn Point" type="Node2D" parent="Area 2"]
 position = Vector2(-617, 237)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area 2"]
 stream = ExtResource("16_p6ear")
 volume_db = -13.117
 
@@ -448,6 +466,6 @@ scene_name = "room_1"
 
 [connection signal="timeout" from="Area 1/Cutscene Timer" to="." method="_on_cutscene_timer_timeout"]
 [connection signal="on_transition" from="Area 1/RoomTransitionTrigger" to="Area 1" method="_on_room_transition_trigger_on_transition"]
-[connection signal="body_entered" from="Area 3/command start" to="Area 3" method="_on_command_start_body_entered"]
 [connection signal="body_entered" from="Area 3/command start" to="Area 3" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area 3/command start" to="Area 3" method="_on_command_start_body_entered"]
 [connection signal="body_entered" from="Area 3/command end" to="Area 3" method="_on_command_end_body_entered"]

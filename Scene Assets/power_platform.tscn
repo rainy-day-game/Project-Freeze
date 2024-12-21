@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://d4gj4i646lbas"]
 
-[ext_resource type="Texture2D" uid="uid://bb30qmcba6iep" path="res://art assets/Power/power platform warning/platform indicator_0000.png" id="1_yrdn0"]
-[ext_resource type="Texture2D" uid="uid://bjr270gd6tfsa" path="res://art assets/Power/power platform warning/platform indicator_0001.png" id="2_2wrfn"]
-[ext_resource type="Texture2D" uid="uid://6d2bfc60ni88" path="res://art assets/Power/power platform warning/platform indicator_0002.png" id="3_puyvc"]
-[ext_resource type="Texture2D" uid="uid://dufkdllnowt46" path="res://art assets/Power/power platform warning/platform indicator_0003.png" id="4_qgq28"]
-[ext_resource type="Texture2D" uid="uid://y8ond8niu6cf" path="res://art assets/power platform/platform_0000.png" id="5_1gtdc"]
-[ext_resource type="Texture2D" uid="uid://mfi3ruhsmaus" path="res://art assets/power platform/platform_0001.png" id="6_wxcjs"]
-[ext_resource type="Texture2D" uid="uid://bg1wbw43nmsuh" path="res://art assets/power platform/platform_0002.png" id="7_4pmus"]
+[ext_resource type="Texture2D" uid="uid://cqcl5e5nrtkys" path="res://art assets/Power/power platform warning/platform indicator_0000.png" id="1_yrdn0"]
+[ext_resource type="Texture2D" uid="uid://dielmdtmffusi" path="res://art assets/Power/power platform warning/platform indicator_0001.png" id="2_2wrfn"]
+[ext_resource type="Texture2D" uid="uid://7d54kmy0o4yv" path="res://art assets/Power/power platform warning/platform indicator_0002.png" id="3_puyvc"]
+[ext_resource type="Texture2D" uid="uid://iw8gcvh6u4q8" path="res://art assets/Power/power platform warning/platform indicator_0003.png" id="4_qgq28"]
+[ext_resource type="Texture2D" uid="uid://c6rh2kfu3nsnj" path="res://art assets/power platform/platform_0000.png" id="5_1gtdc"]
+[ext_resource type="Texture2D" uid="uid://c06rlwnsqhd1k" path="res://art assets/power platform/platform_0001.png" id="6_wxcjs"]
+[ext_resource type="Texture2D" uid="uid://b2p5m63mr148r" path="res://art assets/power platform/platform_0002.png" id="7_4pmus"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qw51m"]
 animations = [{
