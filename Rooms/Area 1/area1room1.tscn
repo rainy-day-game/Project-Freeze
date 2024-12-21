@@ -34,7 +34,7 @@ position = Vector2(217, -381)
 scale = Vector2(1.6535, 1.6535)
 sprite_frames = SubResource("SpriteFrames_5fi25")
 autoplay = "default"
-frame_progress = 0.990582
+frame_progress = 0.215352
 
 [node name="foundation platform" type="Sprite2D" parent="."]
 position = Vector2(3, 34)
@@ -47,24 +47,51 @@ texture = ExtResource("4_mhxsl")
 position = Vector2(-13, 567)
 polygon = PackedVector2Array(-350, -13, -272, -33, -165, -21, -73, -10, -36, -23, 51, -4, 110, -2, 169, 10, 242, -16, 293, -12, 344, -20, 421, -20, 362, 104, 35, 121, -174, 99, -298, 110, -366, 100, -373, 30)
 
-[node name="Normal Platform3" parent="." instance=ExtResource("5_mn2wf")]
-position = Vector2(-82, 301)
-scale = Vector2(0.725286, 0.455114)
-
-[node name="Normal Platform6" parent="." instance=ExtResource("5_mn2wf")]
-position = Vector2(185, 182)
-scale = Vector2(0.725286, 0.455114)
-
-[node name="Normal Platform4" parent="." instance=ExtResource("5_mn2wf")]
-position = Vector2(139, 414)
-scale = Vector2(0.725286, 0.455114)
-
-[node name="Normal Platform5" parent="." instance=ExtResource("5_mn2wf")]
-position = Vector2(484, 528)
-scale = Vector2(0.725286, 0.455114)
-
 [node name="Player" parent="." instance=ExtResource("6_jb36y")]
-position = Vector2(-283, 447)
+position = Vector2(-253, 481)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(223, 333)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(404, -189)
+limit_left = -100
+limit_right = 800
+
+[node name="platform" type="Node2D" parent="."]
+position = Vector2(47, 523)
+scale = Vector2(0.836259, 0.533935)
+
+[node name="Normal Platform" parent="platform" instance=ExtResource("5_mn2wf")]
+position = Vector2(0, 0)
+scale = Vector2(1, 1)
+
+[node name="Normal Platform2" parent="platform" instance=ExtResource("5_mn2wf")]
+position = Vector2(301.342, -228.492)
+rotation = -0.01105
+scale = Vector2(1, 1)
+
+[node name="Normal Platform3" parent="platform" instance=ExtResource("5_mn2wf")]
+position = Vector2(-86.0978, -442.001)
+rotation = -0.00988001
+scale = Vector2(1, 1)
+
+[node name="Normal Platform4" parent="platform" instance=ExtResource("5_mn2wf")]
+position = Vector2(402.985, -1488.94)
+rotation = -0.661939
+scale = Vector2(1, 1)
+
+[node name="Normal Platform5" parent="platform" instance=ExtResource("5_mn2wf")]
+position = Vector2(357.545, -670.493)
+scale = Vector2(1, 1)
+
+[node name="Normal Platform7" parent="platform" instance=ExtResource("5_mn2wf")]
+position = Vector2(706.719, -764.137)
+scale = Vector2(1, 1)
+
+[node name="Normal Platform8" parent="platform" instance=ExtResource("5_mn2wf")]
+position = Vector2(304.93, -1084.4)
+rotation = 0.554296
+scale = Vector2(1, 1)
+
+[node name="Normal Platform9" parent="platform" instance=ExtResource("5_mn2wf")]
+position = Vector2(4.7832, -1282.93)
+rotation = 1.56053
+scale = Vector2(1, 1)

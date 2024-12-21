@@ -33,6 +33,8 @@ func _ready() -> void:
 	camera_anim.play("camera")
 	
 	await camera_anim.animation_finished
+	
+	
 	command.visible = true
 	command.start_typing("I dont know what I should be saying I think Lucas could be saying what I need to say")
 	vessel.play()
@@ -43,6 +45,8 @@ func _ready() -> void:
 	await command.typing_finished
 	vessel.stop()
 	command.visible = false
+	
+	
 	camera_anim.play("camera_rev")
 	await camera_anim.animation_finished
 	player.can_control = true
