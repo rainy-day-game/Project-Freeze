@@ -6,3 +6,9 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_0r3ld")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+rotation = 0.47401
+polygon = PackedVector2Array(-137.646, 9.92397, -93.122, 76.9954, -21.5716, 76.2539, 55.7666, 29.8342, 51.7906, -8.58699, 23.4902, -63.7512, -1.04272, -100.618, -91.0692, -70.167, -135.827, -30.3463)

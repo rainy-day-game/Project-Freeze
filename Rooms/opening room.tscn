@@ -1,21 +1,21 @@
 [gd_scene load_steps=26 format=3 uid="uid://cyee4w5mm838s"]
 
-[ext_resource type="Texture2D" uid="uid://63diolmtv5vc" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
+[ext_resource type="Texture2D" uid="uid://dfayoam6jghvp" path="res://art assets/rooms/opening room/actual room/opening room background_0000.png" id="1_c2ytx"]
 [ext_resource type="Script" path="res://Rooms/Scripts/opening.gd" id="1_x354r"]
-[ext_resource type="Texture2D" uid="uid://dl6e8psbexrs1" path="res://art assets/rooms/opening room/Shimmer/shimmer_0000.png" id="2_t2luo"]
-[ext_resource type="Texture2D" uid="uid://bxey0wp0t4ua0" path="res://art assets/rooms/opening room/Shimmer/shimmer_0001.png" id="3_pd70u"]
-[ext_resource type="Texture2D" uid="uid://br8ky4u30nxa0" path="res://art assets/rooms/opening room/Shimmer/shimmer_0002.png" id="4_s3yqt"]
-[ext_resource type="Texture2D" uid="uid://118h6aunabkq" path="res://art assets/rooms/opening room/Shimmer/shimmer_0003.png" id="5_nhsbt"]
-[ext_resource type="Texture2D" uid="uid://cpl3kq0bdtmhp" path="res://art assets/rooms/opening room/vessel/Vessel_0000.png" id="6_ereh3"]
-[ext_resource type="Texture2D" uid="uid://ifnqq3cp10t5" path="res://art assets/rooms/opening room/vessel/Vessel_0001.png" id="7_3metk"]
-[ext_resource type="Texture2D" uid="uid://cibfbgh3i41hu" path="res://art assets/rooms/opening room/vessel/Vessel_0002.png" id="8_iuytc"]
+[ext_resource type="Texture2D" uid="uid://bc3mavkebinqy" path="res://art assets/rooms/opening room/Shimmer/shimmer_0000.png" id="2_t2luo"]
+[ext_resource type="Texture2D" uid="uid://cysd1pk74lhcn" path="res://art assets/rooms/opening room/Shimmer/shimmer_0001.png" id="3_pd70u"]
+[ext_resource type="Texture2D" uid="uid://dr1sc834b8n8b" path="res://art assets/rooms/opening room/Shimmer/shimmer_0002.png" id="4_s3yqt"]
+[ext_resource type="Texture2D" uid="uid://bmei5stll5i5s" path="res://art assets/rooms/opening room/Shimmer/shimmer_0003.png" id="5_nhsbt"]
+[ext_resource type="Texture2D" uid="uid://dlmpwnaw0gnat" path="res://art assets/rooms/opening room/vessel/Vessel_0000.png" id="6_ereh3"]
+[ext_resource type="Texture2D" uid="uid://dwqnvbdxh6g7i" path="res://art assets/rooms/opening room/vessel/Vessel_0001.png" id="7_3metk"]
+[ext_resource type="Texture2D" uid="uid://b41x0x8q5tjok" path="res://art assets/rooms/opening room/vessel/Vessel_0002.png" id="8_iuytc"]
 [ext_resource type="PackedScene" uid="uid://cbyqs7lkh7xa7" path="res://Scene Assets/text.tscn" id="9_t3ysp"]
 [ext_resource type="PackedScene" uid="uid://b3rcve8ampq0s" path="res://Scene Assets/Player.tscn" id="10_cqrww"]
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="11_gn1ss"]
-[ext_resource type="AudioStream" uid="uid://cu71d8u3x7vph" path="res://art assets/rooms/~ assets/151705__gnrja__ocean-waves-3.wav" id="13_p3jxu"]
+[ext_resource type="AudioStream" uid="uid://1j152g0uydp3" path="res://art assets/rooms/~ assets/151705__gnrja__ocean-waves-3.wav" id="13_p3jxu"]
 [ext_resource type="Texture2D" uid="uid://cg01sswd5k6gs" path="res://art assets/rooms/mountain pass/Mountain Pass_0000.png" id="14_psu2n"]
 [ext_resource type="PackedScene" uid="uid://1ajjnb7ts3if" path="res://Scene Assets/room_transition_trigger.tscn" id="15_mhrnq"]
-[ext_resource type="AudioStream" uid="uid://c63com5t7q3yx" path="res://art assets/rooms/~ assets/555062__magnuswaker__cold-wind-loop.wav" id="16_p6ear"]
+[ext_resource type="AudioStream" uid="uid://cvgvqcve1cgml" path="res://art assets/rooms/~ assets/555062__magnuswaker__cold-wind-loop.wav" id="16_p6ear"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uooop"]
 animations = [{
@@ -144,6 +144,45 @@ tracks/6/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_iu2ah"]
+resource_name = "audio_fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area 1/AudioStreamPlayer2D:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-2.811, -25.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/AudioStreamPlayer2D:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-25.0, -13.117]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
 [sub_resource type="Animation" id="Animation_50jbo"]
 resource_name = "camera"
 length = 0.75
@@ -246,45 +285,6 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(593.865, 35.555), Vector2(-369.8, -143.28)]
-}
-
-[sub_resource type="Animation" id="Animation_iu2ah"]
-resource_name = "audio_fade_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Area 1/AudioStreamPlayer2D:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-2.811, -25.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2D/AudioStreamPlayer2D:volume_db")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-25.0, -13.117]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node2D/AudioStreamPlayer2D:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1dfk2"]
