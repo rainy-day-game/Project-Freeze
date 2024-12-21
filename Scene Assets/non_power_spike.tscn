@@ -1,15 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3mjam6wfh5vo"]
+[gd_scene load_steps=9 format=3 uid="uid://c3mjam6wfh5vo"]
+
+[ext_resource type="Texture2D" uid="uid://caq3v75w7inkf" path="res://art assets/Power/non power spike indicator/non power spike indicator_0000.png" id="1_3fglf"]
+[ext_resource type="Texture2D" uid="uid://br6lub8s32dot" path="res://art assets/Power/non power spike indicator/non power spike indicator_0001.png" id="2_416nv"]
+[ext_resource type="Texture2D" uid="uid://demijy6oysfah" path="res://art assets/Power/non power spike indicator/non power spike indicator_0002.png" id="3_02iwh"]
+[ext_resource type="Texture2D" uid="uid://cmjne78r6wk0o" path="res://art assets/Power/non power spike indicator/non power spike indicator_0003.png" id="4_o56l8"]
+[ext_resource type="Texture2D" uid="uid://8webkqx0uap8" path="res://art assets/non-power spike/non power spike_0000.png" id="5_ruyra"]
+[ext_resource type="Texture2D" uid="uid://cccyon4adla6x" path="res://art assets/non-power spike/non power spike_0001.png" id="6_5mmf4"]
+[ext_resource type="Texture2D" uid="uid://rrvgrnc6xrjf" path="res://art assets/non-power spike/non power spike_0002.png" id="7_4hyje"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b6l6p"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3fglf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_416nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_02iwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o56l8")
+}],
 "loop": true,
 "name": &"indicator",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ruyra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5mmf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4hyje")
+}],
+"loop": true,
+"name": &"non power spike",
 "speed": 5.0
 }]
 
 [node name="non power spike" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-29, -25)
 sprite_frames = SubResource("SpriteFrames_b6l6p")
-animation = &"indicator"
+animation = &"non power spike"
