@@ -2,6 +2,8 @@ extends Node
 
 @onready var command = $"../Camera2D/Command Prompt"
 
+@export var speed : int
+@export var text: String
 var started = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,11 +22,11 @@ func _on_command_start_body_entered(body: Node2D) -> void:
 		started = true
 		command.reset_text()
 		command.disappear_continue()
-		command.text_speed = 1
+		command.text_speed = speed
 		command.play_appear()
 		await command.appear_finished
 		
-		command.start_typing("I have installed a jump module into your motherboard. Try it out by pressing [Z] on your keyboard")
+		command.start_typing("I have installed a jump module into your motherboard. Try it out by pressing [C] on your keyboard")
 		await command.typing_finished
 		command.text_speed = 4
 
