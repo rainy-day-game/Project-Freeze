@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpv01x6bshd0m"]
+[gd_scene load_steps=3 format=3 uid="uid://dpv01x6bshd0m"]
+
+[ext_resource type="Script" path="res://Scene Assets/Scripts/snow.gd" id="1_pbgbw"]
 
 [sub_resource type="Gradient" id="Gradient_6c4al"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -18,3 +20,4 @@ damping_max = 5.0
 scale_amount_min = 4.0
 scale_amount_max = 7.0
 color_ramp = SubResource("Gradient_6c4al")
+script = ExtResource("1_pbgbw")

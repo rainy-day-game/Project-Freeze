@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dy87mx71j0ikl"]
+[gd_scene load_steps=9 format=3 uid="uid://dy87mx71j0ikl"]
 
 [ext_resource type="PackedScene" uid="uid://b1qu8xsjui7ah" path="res://Scene Assets/transition_screen.tscn" id="1_e44gc"]
+[ext_resource type="PackedScene" uid="uid://dtmj17q86bh0l" path="res://Scene Assets/power_overlay.tscn" id="2_2gfte"]
 [ext_resource type="PackedScene" uid="uid://dpv01x6bshd0m" path="res://Scene Assets/Snow_Test.tscn" id="5_njmxw"]
 [ext_resource type="PackedScene" uid="uid://cbyqs7lkh7xa7" path="res://Scene Assets/text.tscn" id="6_rwrhf"]
 [ext_resource type="PackedScene" uid="uid://drx7ymy4kb7kn" path="res://Scene Assets/spike.tscn" id="7_gyicn"]
@@ -11,6 +12,9 @@
 [node name="Room1" type="Node2D"]
 
 [node name="TransitionScreen" parent="." instance=ExtResource("1_e44gc")]
+
+[node name="PowerOverlay" parent="." instance=ExtResource("2_2gfte")]
+visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 325)

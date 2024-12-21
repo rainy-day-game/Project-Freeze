@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://c3mjam6wfh5vo"]
 
-[ext_resource type="Texture2D" uid="uid://caq3v75w7inkf" path="res://art assets/Power/non power spike indicator/non power spike indicator_0000.png" id="1_3fglf"]
-[ext_resource type="Texture2D" uid="uid://br6lub8s32dot" path="res://art assets/Power/non power spike indicator/non power spike indicator_0001.png" id="2_416nv"]
-[ext_resource type="Texture2D" uid="uid://demijy6oysfah" path="res://art assets/Power/non power spike indicator/non power spike indicator_0002.png" id="3_02iwh"]
-[ext_resource type="Texture2D" uid="uid://cmjne78r6wk0o" path="res://art assets/Power/non power spike indicator/non power spike indicator_0003.png" id="4_o56l8"]
-[ext_resource type="Texture2D" uid="uid://8webkqx0uap8" path="res://art assets/non-power spike/non power spike_0000.png" id="5_ruyra"]
-[ext_resource type="Texture2D" uid="uid://cccyon4adla6x" path="res://art assets/non-power spike/non power spike_0001.png" id="6_5mmf4"]
-[ext_resource type="Texture2D" uid="uid://rrvgrnc6xrjf" path="res://art assets/non-power spike/non power spike_0002.png" id="7_4hyje"]
+[ext_resource type="Texture2D" uid="uid://61eyburu0rxj" path="res://art assets/Power/non power spike indicator/non power spike indicator_0000.png" id="1_3fglf"]
+[ext_resource type="Texture2D" uid="uid://dob0fkhnrwypk" path="res://art assets/Power/non power spike indicator/non power spike indicator_0001.png" id="2_416nv"]
+[ext_resource type="Texture2D" uid="uid://i1cxq0lxkdv" path="res://art assets/Power/non power spike indicator/non power spike indicator_0002.png" id="3_02iwh"]
+[ext_resource type="Texture2D" uid="uid://cxl7333oyh3pe" path="res://art assets/Power/non power spike indicator/non power spike indicator_0003.png" id="4_o56l8"]
+[ext_resource type="Texture2D" uid="uid://dhml1hh8v8hsf" path="res://art assets/non-power spike/non power spike_0000.png" id="5_ruyra"]
+[ext_resource type="Texture2D" uid="uid://de4r0s3q5cs2d" path="res://art assets/non-power spike/non power spike_0001.png" id="6_5mmf4"]
+[ext_resource type="Texture2D" uid="uid://30jwhnihi7iv" path="res://art assets/non-power spike/non power spike_0002.png" id="7_4hyje"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b6l6p"]
 animations = [{

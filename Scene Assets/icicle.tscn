@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbnuhrghsxg8"]
+[gd_scene load_steps=2 format=3 uid="uid://brwgo72gqgp55"]
 
-[ext_resource type="Texture2D" uid="uid://b3nuq4xg4xuao" path="res://art assets/tiles/icicle_0000.png" id="1_dtj36"]
+[ext_resource type="Texture2D" uid="uid://b3bpcigeivcrv" path="res://art assets/tiles/icicle_0000.png" id="1_dtj36"]
 
 [node name="icicle" type="Node2D"]
 

@@ -465,7 +465,6 @@ scale = Vector2(1, 7.03)
 scene_name = "room_1"
 
 [connection signal="timeout" from="Area 1/Cutscene Timer" to="." method="_on_cutscene_timer_timeout"]
-[connection signal="on_transition" from="Area 1/RoomTransitionTrigger" to="Area 1" method="_on_room_transition_trigger_on_transition"]
 [connection signal="body_entered" from="Area 3/command start" to="Area 3" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area 3/command start" to="Area 3" method="_on_command_start_body_entered"]
 [connection signal="body_entered" from="Area 3/command end" to="Area 3" method="_on_command_end_body_entered"]

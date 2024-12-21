@@ -13,6 +13,8 @@ var move_player = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player.can_control = false
+	player.play_animations = false
+	player.animated_sprite.play("shut off")
 	TransitionScreen.fade_out_really_slow()
 	cutscene_timer.start(6)
 	await cutscene_timer.timeout
@@ -24,8 +26,14 @@ func _ready() -> void:
 	await command.typing_finished
 	vessel.stop()
 	command.visible = false
-	cutscene_timer.start(0.5)
+	cutscene_timer.start(0.2)
 	await cutscene_timer.timeout
+	player.animated_sprite.stop()
+	player.animated_sprite.play("get up")
+	await player.animated_sprite.animation_finished
+	cutscene_timer.start(0.2)
+	await cutscene_timer.timeout
+	player.play_animations = true
 	move_player = true
 	
 	await stopped_moving

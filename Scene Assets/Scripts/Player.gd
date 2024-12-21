@@ -10,6 +10,8 @@ var jump_up_start = false
 var jump_down_start = false
 
 var can_control = true
+var play_animations = true
+var can_use_power = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -35,9 +37,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _process(delta):
-	
-	apply_movement_anim()
-	apply_jump_anim() # Jump will override movement
+	if (play_animations):
+		apply_movement_anim()
+		apply_jump_anim() # Jump will override movement
 	spikebutton()
 func apply_movement_anim():
 	'''Takes direction moving, and appplies the movement and animation'''
@@ -82,7 +84,7 @@ func apply_jump_anim():
 	
 
 func spikebutton():
-	if Input.is_action_just_pressed("spike button"):
+	if Input.is_action_just_pressed("spike button") and can_use_power:
 		if Global.spikebutt:
 			Global.spikebutt = false
 		else:
