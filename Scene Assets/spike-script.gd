@@ -36,6 +36,7 @@ func _process(delta):
 		self.visible = false
 
 
+
 func _on_area_2d_body_entered(body):
 	if Global.spikebutt and body.name == 'Player':
 		
